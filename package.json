@@ -21,7 +21,7 @@
     "music"
   ],
   "author": "Marco (https://github.com/Mawco)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mawco/node-tidal/issues"
   },
