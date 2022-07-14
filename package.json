@@ -1,5 +1,5 @@
 {
-  "name": "tidal.js",
+  "name": "node-tidal",
   "version": "1.0.0",
   "description": "Unofficial TIDAL API wrapper.",
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mawco/tidal.js.git"
+    "url": "git+https://github.com/Mawco/node-tidal.git"
   },
   "keywords": [
     "tidal",
@@ -23,9 +23,9 @@
   "author": "Marco (https://github.com/Mawco)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mawco/tidal.js/issues"
+    "url": "https://github.com/Mawco/node-tidal/issues"
   },
-  "homepage": "https://github.com/Mawco/tidal.js#readme",
+  "homepage": "https://github.com/Mawco/node-tidal#readme",
   "dependencies": {
     "@glazk0/prettier-config": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
