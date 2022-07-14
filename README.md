@@ -1,18 +1,22 @@
 
 # node-tidal
+
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FMawco%2Fnode-tidal%2Fbadge%3Fref%3Dmaster&style=for-the-badge)](https://github.com/Mawco/node-tidal)
 
 NodeJS wrapper for TIDAL's API.
 
+### Installation
+
+`npm i node-tidal`
 
 ## Features
 
 - Playlist Management
 
-
 ## Usage/Examples
 
 ### Playlist infos
+
 ```javascript
 const { Client } = require('tidal.js');
 
@@ -44,8 +48,6 @@ client.playlists.getPlaylistInfos('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b').then(d
 });
 ```
 
-
 ## License
 
 [MIT](https://github.com/Mawco/node-tidal/blob/master/LICENSE)
-
