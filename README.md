@@ -48,5 +48,5 @@ client.playlists.getPlaylistInfos('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b').then(d
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/Mawco/node-tidal/blob/master/LICENSE)
 
