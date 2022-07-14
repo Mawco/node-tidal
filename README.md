@@ -1,6 +1,6 @@
 
 # node-tidal
-![GitHub](https://img.shields.io/github/license/Mawco/node-tidal)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FMawco%2Fnode-tidal%2Fbadge%3Fref%3Dmaster&style=for-the-badge)](https://github.com/Mawco/node-tidal)
 
 NodeJS wrapper for TIDAL's API.
 
@@ -8,7 +8,6 @@ NodeJS wrapper for TIDAL's API.
 ## Features
 
 - Playlist Management
-- Search
 
 
 ## Usage/Examples
