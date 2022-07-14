@@ -1,0 +1,46 @@
+{
+  "name": "tidal.js",
+  "version": "1.0.0",
+  "description": "Unofficial TIDAL API wrapper.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "mocha --reporter spec --require ts-node/register test/test.ts",
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mawco/tidal.js.git"
+  },
+  "keywords": [
+    "tidal",
+    "music"
+  ],
+  "author": "Marco (https://github.com/Mawco)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mawco/tidal.js/issues"
+  },
+  "homepage": "https://github.com/Mawco/tidal.js#readme",
+  "dependencies": {
+    "@glazk0/prettier-config": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "axios": "^0.27.2",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
