@@ -1,5 +1,6 @@
 
 # TIDAL.js
+![GitHub](https://img.shields.io/github/license/Mawco/tidal.js)
 
 NodeJS wrapper for TIDAL's API.
 
