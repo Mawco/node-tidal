@@ -49,7 +49,7 @@ export class Client {
         if (typeof retryAfter == 'number') await new Promise((r) => setTimeout(r, retryAfter * 1000));
         return this.request(url, options);
         // @ts-ignore
-      } else if (error.response.statusText == 'Invalid access token') throw new Error('');
+      } else if (error.response.statusText == 'Invalid access token') throw new Error('Invalid access token');
       else throw error;
     }
   }
