@@ -1,96 +1,108 @@
-import { Client } from "..";
-import Axios from 'axios';
+import { Client } from '..';
 
-export type orderTypes = 'INDEX' | 'NAME' | 'ARTIST' | 'ALBUM' | 'DATE' | 'LENGTH';
-export type orderDirections = 'ASC' | 'DESC';
-export type onDupes = 'FAIL' | 'ADD';
+import { AddedSong, OnDupes, OrderDirections, OrderTypes, TidalPlaylist, TidalSong } from '../types';
 
 export class Playlists {
-    client: Client;
+  client: Client;
 
-    constructor(client: Client) {
-        this.client = client;
-    }
+  constructor(client: Client) {
+    this.client = client;
+  }
 
-    public async getPlaylistInfos(playlistId: string): Promise<any> {
-        if(!playlistId) throw new Error('PlaylistId not specified');
-        
-        try {
-            const res = await Axios({
-                url: `https://desktop.tidal.com/v1/playlists/${playlistId}?countryCode=FR`,
-                headers: {
-                    authorization: `Bearer ${this.client.token}`
-                }
-            });
-            
-            return res.data;   
-        } catch (err) {
-            throw err;
-        }
-    }
+  /**
+   * It gets the playlist information from the Tidal API.
+   * @param {string} playlistId - The ID of the playlist you want to get the information of.
+   * @returns TidalPlaylist
+   */
+  public async getPlaylistInfos(playlistId: string): Promise<any> {
+    if (!playlistId) throw new Error('PlaylistId not specified');
+    const response = await this.client.request(`playlists/${playlistId}`);
+    return response as TidalPlaylist;
+  }
 
-    public async getPlaylistSongs(playlistId: string, limit: number = 50, offset: number = 0, order: orderTypes = 'DATE', orderDirection: orderDirections = 'ASC') {
-        if(!playlistId) throw new Error('PlaylistId not specified');
+  /**
+   * It gets the songs from a playlist.
+   * @param {string} playlistId - The id of the playlist you want to get the songs from.
+   * @param {number} [limit=50] - The number of results to return.
+   * @param {number} [offset=0] - The offset of the first song to return.
+   * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
+   * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
+   * @returns An array of songs
+   */
+  public async getPlaylistSongs(
+    playlistId: string,
+    limit: number = 50,
+    offset: number = 0,
+    order: OrderTypes = 'DATE',
+    orderDirection: OrderDirections = 'ASC',
+  ) {
+    if (!playlistId) throw new Error('PlaylistId not specified');
+    const response = await this.client.request(`playlists/${playlistId}/items`, {
+      params: {
+        offset,
+        limit,
+        order,
+        orderDirection,
+      },
+    });
+    return response as TidalSong;
+  }
 
-        try {
-            const res = await Axios({
-                url: `https://desktop.tidal.com/v1/playlists/${playlistId}/items?offset=${offset}&limit=${limit}&order=${order}&orderDirection=${orderDirection}&countryCode=FR`,
-                headers: {
-                    authorization: `Bearer ${this.client.token}`
-                }
-            });
-            
-            return res.data;   
-        } catch (err) {
-            throw err;
-        }
-    }
+  /**
+   * It adds a song to a playlist.
+   * @param {string} playlistId - The id of the playlist you want to add the song to.
+   * @param {string} trackId - The ID of the track you want to add to the playlist.
+   * @param {OnDupes} [onDupes=FAIL] - This is the action to take if the song is already in the
+   * playlist.
+   * @returns AddedSong
+   */
+  public async addSong(playlistId: string, trackId: string, onDupes: OnDupes = 'FAIL') {
+    if (!playlistId) throw new Error('PlaylistId not specified');
+    if (!trackId) throw new Error('trackId not specified');
+    const response = await this.client.request(`playlists/${playlistId}/items`, {
+      method: 'POST',
+      body: new URLSearchParams({
+        onArtifactNotFound: 'FAIL',
+        onDupes,
+        trackIds: trackId,
+      }) as any,
+      headers: {
+        'If-None-Match': '*',
+      },
+    });
+    return response as AddedSong;
+  }
 
-    public async addSong(playlistId: string, trackId: string, onDupes: onDupes = 'FAIL',) {
-        if(!playlistId) throw new Error('PlaylistId not specified');
-        if(!trackId) throw new Error('trackId not specified');
+  // TODO This doesn't work
+  // Error: data: { status: 400, subStatus: 1002, userMessage: 'Invalid indices' }
+  // Path: path: '/v1/playlists/6dbde151-4118-4099-8f3f-69bd0e2765ff/items/1?order=INDEX&orderDirection=ASC&countryCode=FR'
 
-        try {
-            const res = await Axios({
-                url: `https://desktop.tidal.com/v1/playlists/${playlistId}/items?countryCode=FR`,
-                method: 'post',
-                headers: {
-                    'authorization': `Bearer ${this.client.token}`,
-                    'If-None-Match': '*'
-                },
-                data: new URLSearchParams({
-                    onArtifactNotFound: 'FAIL',
-                    onDupes,
-                    trackIds: trackId
-                  })
-            });
-            
-            return res.data;   
-        } catch (err) {
-            throw err;
-        }
-    }
-
-    public async deleteSong(playlistId: string, index: number, order: orderTypes = 'DATE', orderDirection: orderDirections = 'ASC') {
-        if(!playlistId) throw new Error('PlaylistId not specified');
-        if(!index) throw new Error('index not specified');
-        
-        try {
-            const res = await Axios({
-                url: `https://desktop.tidal.com/v1/playlists/${playlistId}/items/${index}?countryCode=FR`,
-                method: 'delete',
-                headers: {
-                    'authorization': `Bearer ${this.client.token}`,
-                    'If-None-Match': '*'
-                }
-            });
-            
-            if (this.client.options.debug) {
-                console.log(res.status, res.statusText, res.headers, res.config, res.data)
-            }
-            return res.data;   
-        } catch (err) {
-            throw new Error(err);
-        }
-    }
+  /**
+   * It deletes a song from a playlist.
+   * @param {string} playlistId - The ID of the playlist you want to delete a song from.
+   * @param {number} index - The index of the song in the playlist
+   * @param {OrderTypes} [order=INDEX] - OrderTypes = 'INDEX'
+   * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC'
+   * @returns The response from the server.
+   */
+  public async deleteSong(
+    playlistId: string,
+    index: number,
+    order: OrderTypes = 'INDEX',
+    orderDirection: OrderDirections = 'ASC',
+  ) {
+    if (!playlistId) throw new Error('PlaylistId not specified');
+    if (!index) throw new Error('Index not specified');
+    const response = await this.client.request(`playlists/${playlistId}/items/${index}`, {
+      method: 'DELETE',
+      headers: {
+        'If-None-Match': '*',
+      },
+      params: {
+        order,
+        orderDirection,
+      },
+    });
+    return response;
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "node-tidal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Unofficial TIDAL API wrapper.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,9 @@
   "scripts": {
     "test": "mocha --reporter spec --require ts-node/register test/test.ts",
     "build": "tsc",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "lint": "eslint --ignore-path .gitignore",
+    "prettier": "prettier --ignore-path .gitignore --write ."
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,9 @@
     "music"
   ],
   "author": "Marco (https://github.com/Mawco)",
+  "contributors": [
+    "glazk0 (https://github.com/glazk0)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mawco/node-tidal/issues"
@@ -28,8 +33,8 @@
   "homepage": "https://github.com/Mawco/node-tidal#readme",
   "dependencies": {
     "@glazk0/prettier-config": "^1.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^3.10.1",
     "axios": "^0.27.2",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
@@ -41,6 +46,6 @@
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
     "chai": "^4.3.6",
-    "mocha": "^10.0.0"
+    "mocha": "^6.2.3"
   }
 }
