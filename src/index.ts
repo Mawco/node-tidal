@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-import { Playlists } from './api/Playlists';
+import { Playlists } from './api/playlists';
 
 import { ClientOptions, Country, RequestOptions } from './types';
 
