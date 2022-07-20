@@ -1,11 +1,11 @@
 {
   "name": "node-tidal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Unofficial TIDAL API wrapper.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "test": "mocha --reporter spec --require ts-node/register test/test.ts",
