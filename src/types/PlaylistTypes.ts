@@ -86,3 +86,12 @@ export interface AddedSong {
   lastUpdated: number;
   addedItemIds: number[];
 }
+
+export interface Deleted {
+  status: string;
+  playlistId?: string;
+  folderId?: string;
+  index?: number;
+  playlist?: TidalPlaylist;
+  song?: Song;
+}
