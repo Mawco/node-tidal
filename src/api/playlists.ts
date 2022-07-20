@@ -73,10 +73,6 @@ export class Playlists {
     return response as AddedSong;
   }
 
-  // TODO This doesn't work
-  // Error: data: { status: 400, subStatus: 1002, userMessage: 'Invalid indices' }
-  // Path: path: '/v1/playlists/6dbde151-4118-4099-8f3f-69bd0e2765ff/items/1?order=INDEX&orderDirection=ASC&countryCode=FR'
-
   /**
    * It deletes a song from a playlist.
    * @param {string} playlistId - The ID of the playlist you want to delete a song from.
