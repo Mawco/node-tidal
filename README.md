@@ -19,6 +19,17 @@ This is a NodeJS wrapper for TIDAL's API with typings.
 npm i node-tidal
 ```
 
+<details>
+<summary>How to find your token</summary>
+
+## How to find your token
+**!!! TOKEN MAY CHANGE ONCE EVERY FEW DAYS !!!**
+1. Go to [listen.tidal.com](https://listen.tidal.com) (make sure you're logged in 😐).
+2. Open the devtools and go to network.
+3. Click on `Fetch/XHR`.
+4. Click any request and look for the `authorization` request header. ![authorization request header](./images/token.png)
+</details>
+
 ## Features
 
 - Playlist Management
