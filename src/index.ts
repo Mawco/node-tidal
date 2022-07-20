@@ -29,7 +29,7 @@ export class Client {
   public async request(url: string, options?: RequestOptions) {
     try {
       const { data, status, statusText, headers, config } = await axios({
-        url: `https://desktop.tidal.com/v1/${url}`,
+        url: `https://${options?.modes || 'desktop'}.tidal.com/${options?.versions || 'v1'}/${url}`,
         method: options?.method || 'GET',
         params: { ...options?.params, countryCode: this.countryCode },
         headers: {
