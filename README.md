@@ -39,15 +39,15 @@ npm i node-tidal
 ### Playlist infos
 
 ```javascript
-const { Client } = require('node-tidal');
+const { Tidal } = require('node-tidal');
 
-/* Instantiate a new Client object with your Tidal token. */
-const client = new Client({ token: 'token >:(', countryCode: 'EN' });
+/* Instantiate a new Tidal object with your Tidal token. */
+const tidal = new Tidal({ token: 'token >:(', countryCode: 'EN' });
 
 async function playlistExample() {
   // It's getting the playlist infos of the playlist with the uuid
   // `f4cf62d9-7920-42ca-a2ac-409cf2b1df5b`.
-  const playlistInfos = await client.playlists.getPlaylistInfos('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
+  const playlistInfos = await tidal.playlists.getPlaylistInfos('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
 
   // OUTPUT:
   //{
@@ -72,7 +72,7 @@ async function playlistExample() {
 
   // It's getting the playlist songs of the playlist with the uuid
   // `f4cf62d9-7920-42ca-a2ac-409cf2b1df5b`.
-  const playlistSongs = await client.playlists.getPlaylistSongs('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
+  const playlistSongs = await tidal.playlists.getPlaylistSongs('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
 
   // OUTPUT:
   //   {
@@ -145,7 +145,7 @@ async function playlistExample() {
 
   // It's adding the song with the id `43746407` to the playlist with the uuid
   // `f4cf62d9-7920-42ca-a2ac-409cf2b1df5b`.
-  const addSong = await client.playlists.addSong('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b', '43746407');
+  const addSong = await tidal.playlists.addSong('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b', '43746407');
 
   // OUTPUT:
   // { lastUpdated: 1658257738994, addedItemIds: [ 43746407 ] }
@@ -180,7 +180,7 @@ export type Country =
 
 export type Methods = 'GET' | 'POST' | 'DELETE' | 'PUT' | 'PATCH';
 
-export interface ClientOptions {
+export interface tidal {
   token: string;
   countryCode?: Country;
   debug?: boolean;
@@ -231,7 +231,7 @@ export interface Artist {
   picture: string;
 }
 
-export interface Song {
+export interface Track {
   id: number;
   title: string;
   duration: number;
@@ -277,14 +277,14 @@ export interface Song {
   itemUuid: string;
 }
 
-export interface TidalSong {
+export interface TidalTrack {
   limit: number;
   offset: number;
   totalNumberOfItems: number;
-  items: [{ item: Song; type: string; cut: string | number | null }];
+  items: [{ item: Track; type: string; cut: string | number | null }];
 }
 
-export interface AddedSong {
+export interface AddedTrack {
   lastUpdated: number;
   addedItemIds: number[];
 }

@@ -1,4 +1,4 @@
-import { Client } from '../src/index';
+import { Tidal } from '../src/index';
 
 import * as chai from 'chai';
 
@@ -9,7 +9,7 @@ const expect = chai.expect;
 // describe('TIDAL.js', () => {
 //   it('test', () => {
 //     // haven't done the tests yet :/
-//     expect(new Client({ token: 'test' }))
+//     expect(new Tidal({ token: 'test' }))
 //       .to.have.a.property('token')
 //       .that.equals('test');
 //   });

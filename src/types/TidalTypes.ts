@@ -1,6 +1,7 @@
 export type OrderTypes = 'INDEX' | 'NAME' | 'ARTIST' | 'ALBUM' | 'DATE' | 'LENGTH';
 export type OrderDirections = 'ASC' | 'DESC';
 export type OnDupes = 'FAIL' | 'ADD';
+export type searchType = 'artists' | 'albums' | 'tracks' | 'videos' | 'playlists';
 
 export interface TidalPlaylist {
   uuid: string;
@@ -22,14 +23,46 @@ export interface TidalPlaylist {
   lastItemAddedAt: string;
 }
 
+export interface TidalAlbum {
+  id: number;
+  title: string;
+  duration: number;
+  streamReady: boolean;
+  streamStartDate: string;
+  allowStreaming: boolean;
+  premiumStreamingOnly: boolean;
+  numberOfTracks: number;
+  numberOfVideos: number;
+  numberOfVolumes: number;
+  releaseDate: string;
+  copyright: string;
+  type: string;
+  version: string | number | null;
+  url: string;
+  cover: string;
+  vibrantColor: string;
+  videoCover: string | null;
+  explicit: boolean;
+  upc: string;
+  popularity: number;
+  audioQuality: string;
+  audioModes: string[];
+  artist: {
+    id: number;
+    name: string;
+    type: string;
+  };
+  artists: Artist[];
+}
+
 export interface Artist {
   id: number;
   name: string;
   type: string;
-  picture: string;
+  picture?: string;
 }
 
-export interface Song {
+export interface Track {
   id: number;
   title: string;
   duration: number;
@@ -75,14 +108,14 @@ export interface Song {
   itemUuid: string;
 }
 
-export interface TidalSong {
+export interface TidalTrack {
   limit: number;
   offset: number;
   totalNumberOfItems: number;
-  items: [{ item: Song; type: string; cut: string | number | null }];
+  items: [{ item: Track; type: string; cut: string | number | null }];
 }
 
-export interface AddedSong {
+export interface AddedTrack {
   lastUpdated: number;
   addedItemIds: number[];
 }
@@ -93,5 +126,35 @@ export interface Deleted {
   folderId?: string;
   index?: number;
   playlist?: TidalPlaylist;
-  song?: Song;
+  song?: Track;
+}
+
+export interface CreatedPlaylist {
+  trn: string;
+  itemType: string;
+  addedAt: string;
+  lastModifiedAt: string;
+  name: string;
+  parent: string | number | null;
+  data: {
+    uuid: string;
+    type: string;
+    creator: { id: string; name: string | null; picture: string | null; type: string };
+    contentBehavior: string;
+    sharingLevel: string;
+    title: string;
+    description: string;
+    image: string;
+    squareImage: string;
+    url: string;
+    created: string;
+    lastUpdated: string;
+    lastItemAddedAt: string;
+    duration: number;
+    numberOfTracks: number;
+    numberOfVideos: number;
+    promotedArtists: string[];
+    trn: string;
+    itemType: string;
+  };
 }
