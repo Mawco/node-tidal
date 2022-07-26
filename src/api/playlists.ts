@@ -1,12 +1,21 @@
-import { Client } from '..';
+import { Tidal } from '..';
 
-import { AddedSong, Deleted, OnDupes, OrderDirections, OrderTypes, TidalPlaylist, TidalSong } from '../types';
+import {
+  AddedTrack,
+  CreatedPlaylist,
+  Deleted,
+  OnDupes,
+  OrderDirections,
+  OrderTypes,
+  TidalPlaylist,
+  TidalTrack
+} from '../types';
 
 export class Playlists {
-  private client: Client;
+  private client: Tidal;
 
-  constructor(client: Client) {
-    this.client = client;
+  constructor(tidal: Tidal) {
+    this.client = tidal;
   }
 
   /**
@@ -14,10 +23,10 @@ export class Playlists {
    * @param {string} playlistId - The ID of the playlist you want to get the information of.
    * @returns TidalPlaylist
    */
-  public async getPlaylistInfos(playlistId: string): Promise<any> {
+  public async getPlaylist(playlistId: string) {
     if (!playlistId) throw new Error('PlaylistId not specified');
-    const response = await this.client.request(`playlists/${playlistId}`);
-    return response as TidalPlaylist;
+    const response = await this.client._request(`playlists/${playlistId}`);
+    return response as unknown as TidalPlaylist;
   }
 
   /**
@@ -27,9 +36,9 @@ export class Playlists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns TidalSong
+   * @returns TidalTrack
    */
-  public async getPlaylistSongs(
+  public async getPlaylistTracks(
     playlistId: string,
     limit: number = 50,
     offset: number = 0,
@@ -37,7 +46,7 @@ export class Playlists {
     orderDirection: OrderDirections = 'ASC',
   ) {
     if (!playlistId) throw new Error('PlaylistId not specified');
-    const response = await this.client.request(`playlists/${playlistId}/items`, {
+    const response = await this.client._request(`playlists/${playlistId}/items`, {
       params: {
         offset,
         limit,
@@ -45,7 +54,28 @@ export class Playlists {
         orderDirection,
       },
     });
-    return response as TidalSong;
+    return response as unknown as TidalTrack;
+  }
+
+  /**
+   * It creates a playlist in the root folder of the user's collection
+   * @param {string} name - The name of the playlist
+   * @param {string} [description] - The description of the playlist
+   * @returns CreatedPlaylist
+   */
+  public async createPlaylist(name: string, description: string = '') {
+    if (!name) throw new Error('Name not specified');
+    const response = await this.client._request(`my-collection/playlists/folders/create-playlist`, {
+      modes: 'api',
+      method: 'PUT',
+      versions: 'v2',
+      params: {
+        name,
+        description,
+        folderId: 'root',
+      },
+    });
+    return response as unknown as CreatedPlaylist;
   }
 
   /**
@@ -55,9 +85,9 @@ export class Playlists {
    */
   public async deletePlaylist(playlistId: string) {
     if (!playlistId) throw new Error('PlaylistId not specified');
-    const playlist = await this.getPlaylistInfos(playlistId);
-    if (!playlist) throw new Error(`There is no playlist with the ${playlist.uuid} id`);
-    const response = await this.client.request(`my-collection/playlists/folders/remove`, {
+    const playlist = await this.getPlaylist(playlistId);
+    if (!playlist) throw new Error(`There is no playlist with the ${playlistId} id`);
+    const response = await this.client._request(`my-collection/playlists/folders/remove`, {
       modes: 'api',
       method: 'PUT',
       versions: 'v2',
@@ -69,50 +99,50 @@ export class Playlists {
     else return { status: 'Failed', playlistId, playlist } as Deleted;
   }
 
-  /**
-   * It takes a folderId as a parameter, and returns a Deleted object with a status of 'Success' or
-   * 'Failed' and the folderId.
-   * @param {string} folderId - The id of the folder you want to delete
-   * @returns Deleted.
-   */
-  public async deleteFolder(folderId: string) {
-    if (!folderId) throw new Error('PlaylistId not specified');
-    const response = await this.client.request(`my-collection/playlists/folders/remove`, {
-      modes: 'api',
-      method: 'PUT',
-      versions: 'v2',
-      params: {
-        trns: `trn:folder:${folderId}`,
-      },
-    });
-    console.log(response);
-    if (!response) return { status: 'Success', folderId } as Deleted;
-    else return { status: 'Failed', folderId } as Deleted;
-  }
+  // /**
+  //  * It takes a folderId as a parameter, and returns a Deleted object with a status of 'Success' or
+  //  * 'Failed' and the folderId.
+  //  * @param {string} folderId - The id of the folder you want to delete
+  //  * @returns Deleted.
+  //  */
+  // public async deleteFolder(folderId: string) {
+  //   if (!folderId) throw new Error('PlaylistId not specified');
+  //   const response = await this.client._request(`my-collection/playlists/folders/remove`, {
+  //     modes: 'api',
+  //     method: 'PUT',
+  //     versions: 'v2',
+  //     params: {
+  //       trns: `trn:folder:${folderId}`,
+  //     },
+  //   });
+  //   console.log(response);
+  //   if (!response) return { status: 'Success', folderId } as Deleted;
+  //   else return { status: 'Failed', folderId } as Deleted;
+  // }
 
   /**
    * It adds a song to a playlist.
    * @param {string} playlistId - The id of the playlist you want to add the song to.
-   * @param {string} trackId - The ID of the track you want to add to the playlist.
+   * @param {any} trackIds - The ID of the track you want to add to the playlist.
    * @param {OnDupes} [onDupes=FAIL] - This is the action to take if the song is already in the
    * playlist.
-   * @returns AddedSong
+   * @returns AddedTrack
    */
-  public async addSong(playlistId: string, trackId: string, onDupes: OnDupes = 'FAIL') {
+  public async addTrack(playlistId: string, trackIds: any, onDupes: OnDupes = 'FAIL') {
     if (!playlistId) throw new Error('PlaylistId not specified');
-    if (!trackId) throw new Error('trackId not specified');
-    const response = await this.client.request(`playlists/${playlistId}/items`, {
+    if (!trackIds) throw new Error('trackId not specified');
+    const response = await this.client._request(`playlists/${playlistId}/items`, {
       method: 'POST',
       body: new URLSearchParams({
         onArtifactNotFound: 'FAIL',
         onDupes,
-        trackIds: trackId,
+        trackIds,
       }) as any,
       headers: {
         'If-None-Match': '*',
       },
     });
-    return response as AddedSong;
+    return response as unknown as AddedTrack;
   }
 
   /**
@@ -123,7 +153,7 @@ export class Playlists {
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC'
    * @returns Deleted.
    */
-  public async deleteSong(
+  public async deleteTrack(
     playlistId: string,
     index: number,
     order: OrderTypes = 'INDEX',
@@ -131,10 +161,10 @@ export class Playlists {
   ) {
     if (!playlistId) throw new Error('PlaylistId not specified');
     if (!index) throw new Error('Index not specified');
-    const { numberOfTracks } = await this.getPlaylistInfos(playlistId);
+    const { numberOfTracks } = await this.getPlaylist(playlistId);
     if (numberOfTracks <= 1) throw new Error('The playlist need to contain at least 2 tracks');
-    const { items } = await this.getPlaylistSongs(playlistId);
-    const response = await this.client.request(`playlists/${playlistId}/items/${index}`, {
+    const { items } = await this.getPlaylistTracks(playlistId);
+    const response = await this.client._request(`playlists/${playlistId}/items/${index}`, {
       method: 'DELETE',
       headers: {
         'If-None-Match': '*',

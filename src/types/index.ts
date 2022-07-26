@@ -1,2 +1,2 @@
 export * from './ClientTypes';
-export * from './PlaylistTypes';
+export * from './TidalTypes';

@@ -34,5 +34,9 @@ export interface RequestOptions {
   headers?: Record<string, string>;
   method?: Methods;
   params?: Record<string, any>;
-  body?: Record<string, string | boolean | number | URLSearchParams | (string | boolean | number)[]>;
+  body?: Record<string, string | boolean | number | (string | boolean | number)[]>;
+}
+
+export interface Request {
+  request(): void;
 }
