@@ -8,7 +8,7 @@ import {
   OrderDirections,
   OrderTypes,
   TidalPlaylist,
-  TidalTrack
+  TidalTrack,
 } from '../types';
 
 export class Playlists {
@@ -24,7 +24,6 @@ export class Playlists {
    * @returns TidalPlaylist
    */
   public async getPlaylist(playlistId: string) {
-    if (!playlistId) throw new Error('PlaylistId not specified');
     const response = await this.client._request(`playlists/${playlistId}`);
     return response as unknown as TidalPlaylist;
   }
@@ -45,7 +44,6 @@ export class Playlists {
     order: OrderTypes = 'DATE',
     orderDirection: OrderDirections = 'ASC',
   ) {
-    if (!playlistId) throw new Error('PlaylistId not specified');
     const response = await this.client._request(`playlists/${playlistId}/items`, {
       params: {
         offset,
@@ -63,8 +61,7 @@ export class Playlists {
    * @param {string} [description] - The description of the playlist
    * @returns CreatedPlaylist
    */
-  public async createPlaylist(name: string, description: string = '') {
-    if (!name) throw new Error('Name not specified');
+  public async createPlaylist(name: string, description?: string) {
     const response = await this.client._request(`my-collection/playlists/folders/create-playlist`, {
       modes: 'api',
       method: 'PUT',
@@ -84,7 +81,6 @@ export class Playlists {
    * @returns Deleted.
    */
   public async deletePlaylist(playlistId: string) {
-    if (!playlistId) throw new Error('PlaylistId not specified');
     const playlist = await this.getPlaylist(playlistId);
     if (!playlist) throw new Error(`There is no playlist with the ${playlistId} id`);
     const response = await this.client._request(`my-collection/playlists/folders/remove`, {
@@ -129,8 +125,6 @@ export class Playlists {
    * @returns AddedTrack
    */
   public async addTrack(playlistId: string, trackIds: any, onDupes: OnDupes = 'FAIL') {
-    if (!playlistId) throw new Error('PlaylistId not specified');
-    if (!trackIds) throw new Error('trackId not specified');
     const response = await this.client._request(`playlists/${playlistId}/items`, {
       method: 'POST',
       body: new URLSearchParams({
@@ -159,8 +153,6 @@ export class Playlists {
     order: OrderTypes = 'INDEX',
     orderDirection: OrderDirections = 'ASC',
   ) {
-    if (!playlistId) throw new Error('PlaylistId not specified');
-    if (!index) throw new Error('Index not specified');
     const { numberOfTracks } = await this.getPlaylist(playlistId);
     if (numberOfTracks <= 1) throw new Error('The playlist need to contain at least 2 tracks');
     const { items } = await this.getPlaylistTracks(playlistId);

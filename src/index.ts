@@ -2,23 +2,19 @@ import axios from 'axios';
 
 import { Albums, Playlists } from './api';
 
-import { ClientOptions, Country, RequestOptions, searchType } from './types';
+import { ClientOptions, RequestOptions, searchType } from './types';
 
 // @ts-ignore
 import { version } from '../package.json';
 
 export class Tidal {
-  private token: String;
-  private countryCode?: Country;
-  private debug?: Boolean;
+  private options: ClientOptions;
 
   public playlists: Playlists;
   public albums: Albums;
 
   constructor(options: ClientOptions) {
-    this.token = options.token;
-    this.countryCode = options.countryCode || 'FR';
-    this.debug = options.debug || false;
+    this.options = options;
 
     this.albums = new Albums(this);
     this.playlists = new Playlists(this);
@@ -39,19 +35,18 @@ export class Tidal {
    */
   private checkVersion() {
     try {
-      const config = {
+      let tidal = require('child_process').execSync(`npm view node-tidal version`, {
         stdio: ['pipe', 'pipe', 'ignore'],
-      };
-      const tidalVersion = require('child_process').execSync(`npm view node-tidal version`, config);
-      if (tidalVersion)
-        tidalVersion
+      });
+      if (tidal)
+        tidal = tidal
           .toString()
           .trim()
           .replace(/^\n*|\n*$/g, '');
       else throw Error('No version found');
-      if (tidalVersion !== this.version)
+      if (tidal != this.version)
         return console.log(
-          `A higher version of node-tidal is available, you\'re actually on the ${version} and the latest is ${tidalVersion}\nPlease upgrade by using npm i node-tidal@latest`,
+          `A higher version of node-tidal is available, you\'re actually on the ${this.version} and the latest is ${tidal}\nPlease upgrade by using npm i node-tidal@latest`,
         );
     } catch (error) {
       throw error;
@@ -70,16 +65,15 @@ export class Tidal {
       const { data, status, statusText, headers, config } = await axios({
         url: `https://${options?.modes || 'desktop'}.tidal.com/${options?.versions || 'v1'}/${url}`,
         method: options?.method || 'GET',
-        params: { ...options?.params, countryCode: this.countryCode },
+        params: { ...options?.params, countryCode: this.options.countryCode },
         headers: {
-          Authorization: `Bearer ${this.token}`,
+          Authorization: `Bearer ${this.options.token}`,
           Accept: 'application/json',
           ...options?.headers,
         },
         data: options?.body,
       });
-      if (this.debug) console.log(status, statusText, headers, data, config);
-      this.checkVersion();
+      this.checkVersion;
       return data;
     } catch (error: any) {
       if (!error.response) throw error;
@@ -89,7 +83,7 @@ export class Tidal {
         if (typeof retryAfter == 'number') await new Promise((r) => setTimeout(r, retryAfter * 1000));
         return this._request(url, options);
         // @ts-ignore
-      } else if (error.response.statusText == 'Invalid access token') throw new Error('Invalid access token');
+      } else if (error.response.status == 401) throw new Error('Invalid access token');
       else throw error;
     }
   }
@@ -101,8 +95,6 @@ export class Tidal {
     offset: number = 0,
     includeContributors: boolean = true,
   ) {
-    if (!name) throw new Error('Name not specified');
-    if (!type) throw new Error('Type not specified (artists, albums, tracks, videos, or playlists)');
     const { items } = await this._request(`search/${type}`, {
       params: {
         query: name,

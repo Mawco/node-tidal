@@ -15,7 +15,6 @@ export class Albums {
    * @returns TidalAlbum.
    */
   public async getAlbum(albumId: string) {
-    if (!albumId) throw new Error('albumId not specified');
     const response = await this.client._request(`albums/${albumId}`);
     return response as unknown as TidalAlbum;
   }
@@ -26,7 +25,6 @@ export class Albums {
    * @returns TidalAlbumTracks.
    */
   public async getAlbumTracks(albumId: string) {
-    if (!albumId) throw new Error('albumId not specified');
     const response = await this.client._request(`albums/${albumId}/tracks`);
     // TODO Typing
     return response;
