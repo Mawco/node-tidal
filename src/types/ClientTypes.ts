@@ -24,8 +24,7 @@ export type Modes = 'api' | 'desktop';
 
 export interface ClientOptions {
   token: string;
-  countryCode?: Country;
-  debug?: boolean;
+  countryCode: Country;
 }
 
 export interface RequestOptions {
@@ -35,8 +34,4 @@ export interface RequestOptions {
   method?: Methods;
   params?: Record<string, any>;
   body?: Record<string, string | boolean | number | (string | boolean | number)[]>;
-}
-
-export interface Request {
-  request(): void;
 }
