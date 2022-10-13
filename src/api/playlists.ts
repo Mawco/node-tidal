@@ -9,6 +9,7 @@ import {
   OrderTypes,
   TidalPlaylist,
   TidalTrack,
+  PlaylistFolders,
 } from '../types';
 
 export class Playlists {
@@ -54,7 +55,17 @@ export class Playlists {
     });
     return response as unknown as TidalTrack;
   }
-
+  /**
+   * It gets all the plalist folders and root playlists from the user's account.
+   * @returns PlaylistFolders
+   */
+  public async getPlaylistFolders() {
+    const response = await this.client._request(`my-collection/playlists/folders`, {
+      modes: 'api',
+      versions: 'v2',
+    });
+    return response as unknown as PlaylistFolders;
+  }
   /**
    * It creates a playlist in the root folder of the user's collection
    * @param {string} name - The name of the playlist
