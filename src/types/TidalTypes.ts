@@ -158,3 +158,70 @@ export interface CreatedPlaylist {
     itemType: string;
   };
 }
+export interface PlaylistFolders {
+  cursor: null;
+  items: Item[];
+  lastModifiedAt: string;
+  totalNumberOfItems: number;
+}
+
+export interface Item {
+  addedAt: string;
+  data: Data;
+  itemType: ItemType;
+  lastModifiedAt: string;
+  name: string;
+  parent: null;
+  trn: string;
+}
+
+export interface Data {
+  contentBehavior?: ContentBehavior;
+  created?: string;
+  createdAt?: string;
+  creator?: Creator;
+  description?: string;
+  duration?: number;
+  id?: string;
+  image?: string;
+  itemType: ItemType;
+  lastItemAddedAt?: string;
+  lastModifiedAt?: string;
+  lastUpdated?: string;
+  name?: string;
+  numberOfTracks?: number;
+  numberOfVideos?: number;
+  promotedArtists?: any[];
+  sharingLevel?: SharingLevel;
+  squareImage?: string;
+  title?: string;
+  totalNumberOfItems?: number;
+  trn: string;
+  type?: Type;
+  url?: string;
+  uuid?: string;
+}
+
+export enum ContentBehavior {
+  Unrestricted = "UNRESTRICTED",
+}
+
+export interface Creator {
+  id: number;
+  name: string;
+  picture: null;
+  type: Type;
+}
+
+export enum Type {
+  User = "USER",
+}
+
+export enum ItemType {
+  Folder = "FOLDER",
+  Playlist = "PLAYLIST",
+}
+
+export enum SharingLevel {
+  Private = "PRIVATE",
+}
