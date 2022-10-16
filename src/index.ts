@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Albums, Playlists } from './api';
+import { Albums, Playlists, Tracks } from './api';
 
 import { ClientOptions, Country, RequestOptions, searchType } from './types';
 
@@ -11,6 +11,7 @@ export class Tidal {
 
   public playlists: Playlists;
   public albums: Albums;
+  public tracks: Tracks;
 
   constructor(options: ClientOptions) {
     this.options = options;
@@ -19,6 +20,7 @@ export class Tidal {
 
     this.albums = new Albums(this);
     this.playlists = new Playlists(this);
+    this.tracks = new Tracks(this);
   }
 
   /**
@@ -62,6 +64,7 @@ export class Tidal {
         method: options?.method || 'GET',
         params: { ...options?.params, countryCode: this.options.countryCode, deviceType: 'BROWSER' },
         headers: {
+          Origin: 'http://listen.tidal.com',
           Authorization: `Bearer ${this.options.token}`,
           'Content-Type': 'application/x-www-form-urlencoded',
           Accept: 'application/json',
