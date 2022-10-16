@@ -66,16 +66,10 @@ describe('playlist', () => {
   });
 
   describe('deletePlaylist', () => {
-    it('should delete a playlist', async () => {
-      let index: number = -1;
-
-      for (const playlist of playlists) {
-        await tidal.playlists.deletePlaylist(playlist.data.uuid);
-        index++;
-        playlists.splice(index);
-      }
-
-      expect(playlists).to.be.an('array').and.to.have.lengthOf(0);
+    it(`should delete 2 playlists`, async () => {
+      playlists.forEach(async (playlist) => {
+        expect(await tidal.playlists.deletePlaylist(playlist.data.uuid)).to.be.true;
+      });
     });
   });
 

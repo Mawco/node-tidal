@@ -20,9 +20,10 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+      - run: |
+          touch .env
+          echo TIDAL_TOKEN=${{ secrets.TIDAL_TOKEN }} >> .env
       - run: npm test
-        env:
-            TIDAL_TOKEN: ${{secrets.TIDAL_TOKEN}}
 
   publish-npm:
     needs: build
