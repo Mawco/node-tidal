@@ -2,13 +2,12 @@ import axios from 'axios';
 
 import { Albums, Playlists } from './api';
 
-import { ClientOptions, RequestOptions, searchType } from './types';
-
-// @ts-ignore
-import { version } from '../package.json';
+import { ClientOptions, Country, RequestOptions, searchType } from './types';
 
 export class Tidal {
   private options: ClientOptions;
+
+  public countryCode: Country;
 
   public playlists: Playlists;
   public albums: Albums;
@@ -16,64 +15,60 @@ export class Tidal {
   constructor(options: ClientOptions) {
     this.options = options;
 
+    this.countryCode = options.countryCode;
+
     this.albums = new Albums(this);
     this.playlists = new Playlists(this);
   }
 
   /**
-   * It returns the version of the package.
-   * @returns The version property is being returned.
-   */
-  private get version(): string {
-    return version;
-  }
-
-  /**
-   * It checks the version of the package on npm and compares it to the version of the package you're
-   * using. If the version on npm is higher, it will warn you to upgrade.
-   * @returns The version of the package.
-   */
-  private checkVersion() {
-    try {
-      let tidal = require('child_process').execSync(`npm view node-tidal version`, {
-        stdio: ['pipe', 'pipe', 'ignore'],
-      });
-      if (tidal)
-        tidal = tidal
-          .toString()
-          .trim()
-          .replace(/^\n*|\n*$/g, '');
-      else throw Error('No version found');
-      if (tidal != this.version)
-        return console.log(
-          `A higher version of node-tidal is available, you\'re actually on the ${this.version} and the latest is ${tidal}\nPlease upgrade by using npm i node-tidal@latest`,
-        );
-    } catch (error) {
-      throw error;
-    }
+   * It searches for a specific type of content on Tidal.
+   * @param {string} query - The query to search for.
+   * @param {searchType} type - The type of content to search for.
+   * @param {number} [limit=50] - The amount of results to return.
+   * @param {number} [offset=0] - The offset of the results.
+   * @returns The results of the search.
+   **/
+  public async search(
+    query: string,
+    type: searchType,
+    limit: number = 3,
+    offset: number = 0,
+    includeContributors: boolean = true,
+  ) {
+    const { items } = await this._request(`search/${type}`, {
+      params: {
+        query,
+        limit,
+        offset,
+        type,
+        includeContributors,
+      },
+    });
+    return items;
   }
 
   /**
    * It makes a request to the Tidal API, and if it fails, it will retry the request after a certain
-   * amount of time
+   * amount of time.
    * @param {string} url - The url of the request.
    * @param {RequestOptions} [options] - The options of the request.
    * @returns The data from the request.
    */
   public async _request(url: string, options?: RequestOptions): Promise<any> {
     try {
-      const { data, status, statusText, headers, config } = await axios({
+      const { data } = await axios({
         url: `https://${options?.modes || 'desktop'}.tidal.com/${options?.versions || 'v1'}/${url}`,
         method: options?.method || 'GET',
-        params: { ...options?.params, countryCode: this.options.countryCode },
+        params: { ...options?.params, countryCode: this.options.countryCode, deviceType: 'BROWSER' },
         headers: {
           Authorization: `Bearer ${this.options.token}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
           Accept: 'application/json',
           ...options?.headers,
         },
         data: options?.body,
       });
-      this.checkVersion;
       return data;
     } catch (error: any) {
       if (!error.response) throw error;
@@ -86,24 +81,5 @@ export class Tidal {
       } else if (error.response.status == 401) throw new Error('Invalid access token');
       else throw error;
     }
-  }
-
-  public async search(
-    name: string,
-    type: searchType,
-    limit: number = 3,
-    offset: number = 0,
-    includeContributors: boolean = true,
-  ) {
-    const { items } = await this._request(`search/${type}`, {
-      params: {
-        query: name,
-        limit,
-        offset,
-        type,
-        includeContributors,
-      },
-    });
-    return items;
   }
 }
