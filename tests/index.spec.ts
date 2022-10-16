@@ -10,6 +10,7 @@ describe('Tidal', () => {
       countryCode: 'BE',
     });
 
+    expect(tidal).to.be.an('object');
     expect(tidal.countryCode).to.equal('BE');
   });
 });
