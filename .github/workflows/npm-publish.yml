@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: |
           touch .env
-          echo TIDAL_TOKEN=${{ secrets.TIDAL_TOKEN }} >> .env
+          echo TIDAL_TOKEN=${{ secrets.tidal_token }} >> .env
       - run: npm test
 
   publish-npm:
