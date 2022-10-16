@@ -203,7 +203,7 @@ export interface Data {
 }
 
 export enum ContentBehavior {
-  Unrestricted = "UNRESTRICTED",
+  Unrestricted = 'UNRESTRICTED',
 }
 
 export interface Creator {
@@ -214,14 +214,14 @@ export interface Creator {
 }
 
 export enum Type {
-  User = "USER",
+  User = 'USER',
 }
 
 export enum ItemType {
-  Folder = "FOLDER",
-  Playlist = "PLAYLIST",
+  Folder = 'FOLDER',
+  Playlist = 'PLAYLIST',
 }
 
 export enum SharingLevel {
-  Private = "PRIVATE",
+  Private = 'PRIVATE',
 }

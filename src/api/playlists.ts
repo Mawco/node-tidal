@@ -66,6 +66,7 @@ export class Playlists {
     });
     return response as unknown as PlaylistFolders;
   }
+
   /**
    * It creates a playlist in the root folder of the user's collection
    * @param {string} name - The name of the playlist
@@ -106,26 +107,25 @@ export class Playlists {
     else return { status: 'Failed', playlistId, playlist } as Deleted;
   }
 
-  // /**
-  //  * It takes a folderId as a parameter, and returns a Deleted object with a status of 'Success' or
-  //  * 'Failed' and the folderId.
-  //  * @param {string} folderId - The id of the folder you want to delete
-  //  * @returns Deleted.
-  //  */
-  // public async deleteFolder(folderId: string) {
-  //   if (!folderId) throw new Error('PlaylistId not specified');
-  //   const response = await this.client._request(`my-collection/playlists/folders/remove`, {
-  //     modes: 'api',
-  //     method: 'PUT',
-  //     versions: 'v2',
-  //     params: {
-  //       trns: `trn:folder:${folderId}`,
-  //     },
-  //   });
-  //   console.log(response);
-  //   if (!response) return { status: 'Success', folderId } as Deleted;
-  //   else return { status: 'Failed', folderId } as Deleted;
-  // }
+  /**
+   * It takes a folderId as a parameter, and returns a Deleted object with a status of 'Success' or
+   * 'Failed' and the folderId.
+   * @param {string} folderId - The id of the folder you want to delete
+   * @returns Deleted.
+   */
+  public async deleteFolder(folderId: string) {
+    if (!folderId) throw new Error('PlaylistId not specified');
+    const response = await this.client._request(`my-collection/playlists/folders/remove`, {
+      modes: 'api',
+      method: 'PUT',
+      versions: 'v2',
+      params: {
+        trns: `trn:folder:${folderId}`,
+      },
+    });
+    if (!response) return { status: 'Success', folderId } as Deleted;
+    else return { status: 'Failed', folderId } as Deleted;
+  }
 
   /**
    * It adds a song to a playlist.
@@ -135,7 +135,7 @@ export class Playlists {
    * playlist.
    * @returns AddedTrack
    */
-  public async addTrack(playlistId: string, trackIds: any, onDupes: OnDupes = 'FAIL') {
+  public async addTrackToPlaylist(playlistId: string, trackIds: any, onDupes: OnDupes = 'FAIL') {
     const response = await this.client._request(`playlists/${playlistId}/items`, {
       method: 'POST',
       body: new URLSearchParams({
@@ -158,7 +158,7 @@ export class Playlists {
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC'
    * @returns Deleted.
    */
-  public async deleteTrack(
+  public async deleteTrackFromPlaylist(
     playlistId: string,
     index: number,
     order: OrderTypes = 'INDEX',

@@ -44,7 +44,6 @@ yarn add node-tidal
 <details>
 <summary>Basic example</summary>
 
-
 ```ts
 const { Tidal } = require('node-tidal');
 
@@ -82,7 +81,6 @@ playlistExample();
 ```
 
 </details>
-
 
 ## License
 

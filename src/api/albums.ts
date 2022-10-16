@@ -11,31 +11,27 @@ export class Albums {
 
   /**
    * It gets the album information from the Tidal API.
-   * @param {string} albumId - The ID of the album you want to get.
+   * @param {number} albumId - The ID of the album you want to get.
    * @returns TidalAlbum.
    */
-  public async getAlbum(albumId: string) {
+  public async getAlbum(albumId: number) {
     const response = await this.client._request(`albums/${albumId}`);
     return response as unknown as TidalAlbum;
   }
 
   /**
    * It gets the tracks of a album from the Tidal API
-   * @param {string} albumId - The ID of the album you want to get the tracks for.
+   * @param {number} albumId - The ID of the album you want to get the tracks for.
    * @returns TidalAlbumTracks.
    */
-  public async getAlbumTracks(albumId: string) {
+  public async getAlbumTracks(albumId: number) {
     const response = await this.client._request(`albums/${albumId}/tracks`);
     // TODO Typing
     return response;
   }
 
   public async getFeaturedAlbums() {
-    const response = await this.client._request(`pages/show_more_featured_albums`, {
-      params: {
-        deviceType: 'BROWSER',
-      },
-    });
+    const response = await this.client._request(`pages/show_more_featured_albums`);
     const { tabs } = response.rows[0].modules[0];
     const topAlbums = tabs.find((tab: { key: string }) => tab.key === 'featured-top');
     const newAlbums = tabs.find((tab: { key: string }) => tab.key === 'featured-new');
@@ -55,8 +51,8 @@ export class Albums {
    * @reject {Error}
    */
   public async getTopAlbums() {
-    const featuredAlbums = await this.getFeaturedAlbums();
-    return featuredAlbums.topAlbums;
+    const { topAlbums } = await this.getFeaturedAlbums();
+    return topAlbums;
   }
 
   /**
@@ -66,8 +62,8 @@ export class Albums {
    * @reject {Error}
    */
   public async getNewAlbums() {
-    const featuredAlbums = await this.getFeaturedAlbums();
-    return featuredAlbums.newAlbums;
+    const { newAlbums } = await this.getFeaturedAlbums();
+    return newAlbums;
   }
 
   /**
@@ -77,7 +73,7 @@ export class Albums {
    * @reject {Error}
    */
   public async getStaffPickAlbums() {
-    const featuredAlbums = await this.getFeaturedAlbums();
-    return featuredAlbums.staffPicks;
+    const { staffPicks } = await this.getFeaturedAlbums();
+    return staffPicks;
   }
 }
