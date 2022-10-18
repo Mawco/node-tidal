@@ -146,4 +146,7 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# pnpm lockfile
+pnpm-lock.yaml
+
 # End of https://www.toptal.com/developers/gitignore/api/dotenv,node
