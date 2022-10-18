@@ -10,6 +10,7 @@ import {
   TidalPlaylist,
   TidalTrack,
   PlaylistFolders,
+  ItemType,
 } from '../types';
 
 export class Playlists {
@@ -57,12 +58,35 @@ export class Playlists {
   }
   /**
    * It gets all the plalist folders and root playlists from the user's account.
+   * @param {string} [folderId='root'] - The id of the folder you want to get the playlists from.
+   * @param {ItemType} [includeOnly='PLAYLIST | FOLDER'] - The type of items you want to get.
+   * @param {number} [limit=50] - The number of results to return.
+   * @param {number} [offset=0] - The offset of the first song to return.
+   * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
+   * @param {OrderDirections} [orderDirection=DESC] - OrderDirections = 'DESC',
+   * @param {string} [
+   * 
    * @returns PlaylistFolders
    */
-  public async getPlaylistFolders() {
+  public async getPlaylistFolders(
+    folderId: string = 'root',
+    includeOnly: string = '',
+    offset: number = 0,
+    limit: number = 50,
+    order: OrderTypes = 'DATE',
+    orderDirection: OrderDirections = 'DESC',
+  ) {
     const response = await this.client._request(`my-collection/playlists/folders`, {
       modes: 'api',
       versions: 'v2',
+      params: {
+        folderId,
+        includeOnly,
+        offset,
+        limit,
+        order,
+        orderDirection,
+      },
     });
     return response as unknown as PlaylistFolders;
   }
