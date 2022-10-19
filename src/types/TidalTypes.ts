@@ -225,3 +225,12 @@ export enum ItemType {
 export enum SharingLevel {
   Private = 'PRIVATE',
 }
+
+export enum ImageResolution {
+  Small = '160x160',
+  Medium = '320x320',
+  Large = '480x480',
+  XLarge = '640x640',
+  XXLarge = '750x750',
+  XXXLarge = '1080x1080',
+}
