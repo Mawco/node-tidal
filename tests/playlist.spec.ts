@@ -43,6 +43,15 @@ describe('playlist', () => {
     });
   });
 
+  describe('getPlaylistImage', () => {
+    it('should return an url to a playlist by its squareImage', async () => {
+      const playlist = await tidal.playlists.getPlaylist('68d2c88c-f15c-43cf-80d5-08a2214ac6c5');
+      const image = await tidal.playlists.getPlaylistImage(playlist.squareImage);
+
+      expect(image).to.be.a('string');
+    });
+  });
+
   describe('createPlaylist', () => {
     it('should create a playlist with a specified name without a description', async () => {
       const playlist = await tidal.playlists.createPlaylist('Test');

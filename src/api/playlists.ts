@@ -11,6 +11,7 @@ import {
   TidalTrack,
   PlaylistFolders,
   ItemType,
+  ImageResolution,
 } from '../types';
 
 export class Playlists {
@@ -89,6 +90,17 @@ export class Playlists {
       },
     });
     return response as unknown as PlaylistFolders;
+  }
+
+  /** 
+   * It gets the image url of a playlist by a given playlist.data.squareImage
+   * @param {string} squareImage - The squareImage of the playlist
+   * @param {ImageResolution} [resolution=ImageResolution.Medium] - The resolution of the image
+   * @returns {string} - The image url of the playlist
+   */
+  public getPlaylistImage(squareImage: string, resolution: ImageResolution = ImageResolution.Medium) {
+    const IMAGE_BASE_URL = 'https://resources.tidal.com/images/';  
+    return `${IMAGE_BASE_URL}${squareImage.replace(/-/g, '/')}/${resolution}.jpg`;
   }
 
   /**
