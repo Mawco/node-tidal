@@ -1,6 +1,6 @@
-import { Tidal } from '..';
+import { Tidal } from '../index.js';
 
-import { TidalAlbum } from '../types';
+import { Album, AlbumCredits, AlbumTracksWithCredits, Track } from '../types';
 
 export class Albums {
   private client: Tidal;
@@ -12,43 +12,75 @@ export class Albums {
   /**
    * It gets the album information from the Tidal API.
    * @param {number} albumId - The ID of the album you want to get.
-   * @returns TidalAlbum.
+   * @returns {Promise}
+   * @fulfil {Album} - an album object
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getAlbum(albumId: number) {
     const response = await this.client._request(`albums/${albumId}`);
-    return response as unknown as TidalAlbum;
+    return response as Album;
+  }
+
+  /**
+   * It gets the album credits from the Tidal API.
+   * @param {number} albumId - The ID of the album you want to get.
+   * @returns {Promise}
+   * @fulfil {AlbumCredits} - an album credits object
+   * @reject {Error} - The error as returned by Tidal.
+   */
+  public async getAlbumCredits(albumId: number) {
+    const response = await this.client._request(`albums/${albumId}/credits`);
+    return response as AlbumCredits[];
   }
 
   /**
    * It gets the tracks of a album from the Tidal API
    * @param {number} albumId - The ID of the album you want to get the tracks for.
-   * @returns TidalAlbumTracks.
+   * @returns {Promise}
+   * @fulfil {Track[]} - an array of track objects
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getAlbumTracks(albumId: number) {
-    const response = await this.client._request(`albums/${albumId}/tracks`);
-    // TODO Typing
-    return response;
+    const { items } = await this.client._request(`albums/${albumId}/tracks`);
+    return items as Track[];
   }
 
+  /**
+   * It gets the tracks & the credits of a albums from the Tidal API
+   * @param {number} albumId - The ID of the album you want to get the tracks for.
+   * @returns {Promise}
+   * @fulfil {Album} - an album object
+   * @reject {Error} - The error as returned by Tidal.
+   */
+  public async getAlbumTracksWithCredits(albumId: number) {
+    const { items } = await this.client._request(`albums/${albumId}/items/credits`);
+    return items as AlbumTracksWithCredits[];
+  }
+
+  /**
+   * It gets featured albums on Tidal from the Tidal API
+   * @returns {Promise}
+   * @fulfil {Album[]} - an array of album objects
+   * @reject {Error} - The error as returned by Tidal.
+   */
   public async getFeaturedAlbums() {
     const response = await this.client._request(`pages/show_more_featured_albums`);
     const { tabs } = response.rows[0].modules[0];
     const topAlbums = tabs.find((tab: { key: string }) => tab.key === 'featured-top');
     const newAlbums = tabs.find((tab: { key: string }) => tab.key === 'featured-new');
     const staffPicks = tabs.find((tab: { key: string }) => tab.key === 'featured-recommended-album');
-    // TODO Typing
     return {
-      topAlbums: topAlbums.pagedList.items,
-      newAlbums: newAlbums.pagedList.items,
-      staffPicks: staffPicks.pagedList.items,
+      topAlbums: topAlbums.pagedList.items as Album[],
+      newAlbums: newAlbums.pagedList.items as Album[],
+      staffPicks: staffPicks.pagedList.items as Album[],
     };
   }
 
   /**
    * It gets the top 20 albums on Tidal from the Tidal API
    * @returns {Promise}
-   * @fulfil {Array} - an array of album objects
-   * @reject {Error}
+   * @fulfil {ALbum[]} - an array of album objects
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getTopAlbums() {
     const { topAlbums } = await this.getFeaturedAlbums();
@@ -58,8 +90,8 @@ export class Albums {
   /**
    * It gets new albums on Tidal from the Tidal API
    * @returns {Promise}
-   * @fulfil {Array} - an array of album objects
-   * @reject {Error}
+   * @fulfil {ALbum[]} - an array of album objects
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getNewAlbums() {
     const { newAlbums } = await this.getFeaturedAlbums();
@@ -69,8 +101,8 @@ export class Albums {
   /**
    * It gets staff pick albums on Tidal from the Tidal API
    * @returns {Promise}
-   * @fulfil {Array} - an array of album objects
-   * @reject {Error}
+   * @fulfil {ALbum[]} - an array of album objects
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getStaffPickAlbums() {
     const { staffPicks } = await this.getFeaturedAlbums();
