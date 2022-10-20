@@ -31,7 +31,7 @@ yarn add node-tidal
 1. Go to [listen.tidal.com](https://listen.tidal.com) (make sure you're logged in 😐).
 2. Open the devtools and go to network.
 3. Click on `Fetch/XHR`.
-4. Click any request and look for the `authorization` request header. ![authorization request header](./images/token.png)
+4. Click any request and look for the `authorization` request header. ![authorization request header](https://media.discordapp.net/attachments/897586943154606151/1032704304823418932/unknown.png?width=720&height=322)
 </details>
 
 ## Features
