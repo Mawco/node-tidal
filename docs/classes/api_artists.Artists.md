@@ -1,0 +1,470 @@
+[node-tidal](../README.md) / [api/artists](../modules/api_artists.md) / Artists
+
+# Class: Artists
+
+[api/artists](../modules/api_artists.md).Artists
+
+## Table of contents
+
+### Constructors
+
+- [constructor](api_artists.Artists.md#constructor)
+
+### Properties
+
+- [client](api_artists.Artists.md#client)
+
+### Methods
+
+- [getArtist](api_artists.Artists.md#getartist)
+- [getArtistAlbums](api_artists.Artists.md#getartistalbums)
+- [getArtistBio](api_artists.Artists.md#getartistbio)
+- [getArtistMix](api_artists.Artists.md#getartistmix)
+- [getArtistTopTracks](api_artists.Artists.md#getartisttoptracks)
+- [getArtistVideos](api_artists.Artists.md#getartistvideos)
+
+## Constructors
+
+### constructor
+
+• **new Artists**(`tidal`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tidal` | [`Tidal`](index.Tidal.md) |
+
+#### Defined in
+
+api/artists.ts:17
+
+## Properties
+
+### client
+
+• `Private` **client**: [`Tidal`](index.Tidal.md)
+
+#### Defined in
+
+api/artists.ts:15
+
+## Methods
+
+### getArtist
+
+▸ **getArtist**(`artistId`): `Promise`<[`Artist`](../interfaces/types_api_ArtistTypes.Artist.md)\>
+
+It gets the artist information from the Tidal API.
+
+**`Fulfil`**
+
+- The artist.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtist(3529689);
+console.log(artist);
+// {
+// "id": 3529689,
+// "name": "The Notwist",
+// "artistTypes": [
+//     "ARTIST",
+//     "CONTRIBUTOR"
+// ],
+// "url": "http://www.tidal.com/artist/3529689",
+// "picture": "2a4abc4a-faf5-4c06-b2a4-bf142459d894",
+// "popularity": 36,
+// "artistRoles": [
+//    {
+//     "categoryId": -1,
+//     "category": "Artist"
+//    },
+//    {
+//     "categoryId": 11,
+//     "category": "Performer"
+//    },
+//    {
+//     "categoryId": 1,
+//     "category": "Producer"
+//    },
+//    {
+//     "categoryId": 2,
+//     "category": "Songwriter"
+//    },
+//    {
+//     "categoryId": 3,
+//     "category": "Engineer"
+//    }
+// ],
+// "mixes": {
+//     "MASTER_ARTIST_MIX": "0157026712a3687e12af164ecb10ce",
+//     "ARTIST_MIX": "00008ded8a6682c338c2fbabd6619f"
+//    }
+// }
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `artistId` | `number` | The ID of the artist you want to get. |
+
+#### Returns
+
+`Promise`<[`Artist`](../interfaces/types_api_ArtistTypes.Artist.md)\>
+
+.
+
+#### Defined in
+
+api/artists.ts:68
+
+___
+
+### getArtistAlbums
+
+▸ **getArtistAlbums**(`artistId`, `limit?`, `offset?`, `order?`, `orderDirection?`): `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
+
+It gets the artist albums from the Tidal API.
+
+**`Fulfil`**
+
+- The artist albums.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtistAlbums(3529689, 1);
+console.log(artist);
+// {
+//   [
+//     {
+//      "id": 64377395,
+//      "title": "Superheroes, Ghost-Villains + Stuff",
+//      "duration": 5948,
+//      "streamReady": true,
+//      "streamStartDate": "2016-10-14T00:00:00.000+0000",
+//      "allowStreaming": true,
+//      "premiumStreamingOnly": false,
+//      "numberOfTracks": 16,
+//      "numberOfVideos": 0,
+//      "numberOfVolumes": 1,
+//      "releaseDate": "2016-10-14",
+//      "copyright": "Alien Transistor",
+//      "type": "ALBUM",
+//      "version": null,
+//      "url": "http://www.tidal.com/album/64377395",
+//      "cover": "ba4e14ab-e110-41d9-8943-2efdf3c9367d",
+//      "videoCover": null,
+//      "explicit": false,
+//      "upc": "880918225265",
+//      "popularity": 14,
+//      "audioQuality": "LOSSLESS",
+//      "audioModes": [
+//        "STEREO"
+//      ],
+//      "artist": {
+//        "id": 3529689,
+//         "name": "The Notwist",
+//         "type": "MAIN"
+//      },
+//      "artists": [
+//           {
+//            "id": 3529689,
+//            "name": "The Notwist",
+//            "type": "MAIN"
+//           }
+//         ]
+//       },
+//     }
+//   ]
+// }
+```
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `artistId` | `number` | `undefined` | The ID of the artist you want to get. |
+| `limit?` | `number` | `10` | The number of results to return. |
+| `offset?` | `number` | `0` | The offset of the first song to return. |
+| `order?` | [`OrderTypes`](../modules/types_TidalTypes.md#ordertypes) | `'DATE'` | OrderTypes = 'DATE', |
+| `orderDirection?` | [`OrderDirections`](../modules/types_TidalTypes.md#orderdirections) | `'ASC'` | OrderDirections = 'ASC', |
+
+#### Returns
+
+`Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
+
+.
+
+#### Defined in
+
+api/artists.ts:322
+
+___
+
+### getArtistBio
+
+▸ **getArtistBio**(`artistId`): `Promise`<[`ArtistBio`](../interfaces/types_api_ArtistTypes.ArtistBio.md)\>
+
+It gets the artist information from the Tidal API.
+
+**`Fulfil`**
+
+- The artist bio.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtist(3529689);
+console.log(artist);
+// {
+// "source": "TiVo",
+// "lastUpdated": "2020-10-10T05:10:45.967+0000",
+// "text": "Formed near Munich as a post-hardcore band, [wimpLink artistId=\"3529689\"]the Notwist[/wimpLink] gradually began to embrace a fusion of classic '80s indie pop songwriting and scruffy electronic backings indebted to [wimpLink artistId=\"3941046\"]Oval[/wimpLink] and [wimpLink artistId=\"3569016\"]Autechre[/wimpLink]. The quartet comprises brothers [wimpLink artistId=\"10371697\"]Markus[/wimpLink] and [wimpLink artistId=\"9172940\"]Micha Acher[/wimpLink] (on vocals/guitar and bass, respectively) plus programmer/keyboard player [wimpLink artistId=\"13474646\"]Martin Gretschmann[/wimpLink] and drummer Martin Messerschmid. Their self-titled 1989 debut and 1992's [wimpLink albumId=\"20253985\"]Nook[/wimpLink] were rough-and-tumble punk LPs. Third album 12 marked the group's first flirtation with electronics, though the chord structures and vocals of [wimpLink artistId=\"10371697\"]Markus Acher[/wimpLink] marked [wimpLink artistId=\"3529689\"]the Notwist[/wimpLink] more as an alternative band. The band then gained an American distribution deal with Zero Hour, and after 12 was reissued, fourth album [wimpLink albumId=\"23341306\"]Shrink[/wimpLink] -- almost entirely abstract electronic in nature -- appeared in 1998. Neon Golden (2002) and [wimpLink albumId=\"77577154\"]The Devil, You + Me[/wimpLink] (2008) were both song-oriented in nature, albeit with electronics continuing to play a significant role in the band's material. In 2013, the band resurfaced with the single \"Close to the Glass.\" The album of the same name, which boasted some of [wimpLink artistId=\"3529689\"]the Notwist[/wimpLink]'s most accessible songwriting and experimental instrumentation, arrived in early 2014. Later that year, the band issued [wimpLink albumId=\"38519994\"]The Messier Objects[/wimpLink], a collection of instrumental tracks written in the years between [wimpLink albumId=\"77577154\"]The Devil, You + Me[/wimpLink] and [wimpLink albumId=\"25934525\"]Close to the Glass[/wimpLink]. The live album [wimpLink albumId=\"64377395\"]Superheroes, Ghostvillains & Stuff[/wimpLink] appeared in 2016, capturing the second of the band's three consecutive sold-out shows in Leipzig, Germany in late 2015. ~ John Bush"
+// "summary": ""
+// }
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `artistId` | `number` | The ID of the artist you want to get. |
+
+#### Returns
+
+`Promise`<[`ArtistBio`](../interfaces/types_api_ArtistTypes.ArtistBio.md)\>
+
+.
+
+#### Defined in
+
+api/artists.ts:89
+
+___
+
+### getArtistMix
+
+▸ **getArtistMix**(`artistId`): `Promise`<[`ArtistMix`](../interfaces/types_api_ArtistTypes.ArtistMix.md)\>
+
+It gets the artist mix from the Tidal API.
+
+**`Fulfil`**
+
+- The artist mix.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtistMix(3529689);
+console.log(artist);
+// {
+//  "id": "00008ded8a6682c338c2fbabd6619f"
+// }
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `artistId` | `number` | The ID of the artist you want to get. |
+
+#### Returns
+
+`Promise`<[`ArtistMix`](../interfaces/types_api_ArtistTypes.ArtistMix.md)\>
+
+.
+
+#### Defined in
+
+api/artists.ts:111
+
+___
+
+### getArtistTopTracks
+
+▸ **getArtistTopTracks**(`artistId`, `limit?`, `offset?`, `order?`, `orderDirection?`): `Promise`<[`ArtistTracks`](../interfaces/types_api_ArtistTypes.ArtistTracks.md)[]\>
+
+It gets the artist top tracks from the Tidal API.
+
+**`Fulfil`**
+
+- The artist top tracks.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtistTopTracks(3529689, 1);
+console.log(artist);
+// {
+//   [
+//     {
+//       "id": 82448461,
+//       "title": "Consequence",
+//       "duration": 313,
+//       "replayGain": -6.9,
+//       "peak": 1.0,
+//       "allowStreaming": true,
+//       "streamReady": true,
+//       "streamStartDate": "2017-12-05T00:00:00.000+0000",
+//       "premiumStreamingOnly": false,
+//       "trackNumber": 10,
+//       "volumeNumber": 1,
+//       "version": null,
+//       "popularity": 6,
+//       "copyright": "City Slang/big Store",
+//       "url": "http://www.tidal.com/track/82448461",
+//       "isrc": "DED620118410",
+//       "editable": false,
+//       "explicit": false,
+//       "audioQuality": "LOSSLESS",
+//       "audioModes": [
+//         "STEREO"
+//       ],
+//       "artist": {
+//         "id": 3529689,
+//         "name": "The Notwist",
+//         "type": "MAIN"
+//       },
+//       "artists": [
+//         {
+//          "id": 3529689,
+//          "name": "The Notwist",
+//          "type": "MAIN"
+//         }
+//       ],
+//       "album": {
+//         "id": 82448449,
+//         "title": "Neon Golden",
+//         "cover": "ad3ed5f3-37a2-4b27-9002-b83459ab5a0e",
+//         "videoCover": null
+//       },
+//       "mixes": {
+//         "TRACK_MIX": "001981d70c53d5448599714c407079"
+//       }
+//     },
+//   ]
+// }
+```
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `artistId` | `number` | `undefined` | The ID of the artist you want to get. |
+| `limit?` | `number` | `50` | The number of results to return. |
+| `offset?` | `number` | `0` | The offset of the first song to return. |
+| `order?` | [`OrderTypes`](../modules/types_TidalTypes.md#ordertypes) | `'DATE'` | OrderTypes = 'DATE', |
+| `orderDirection?` | [`OrderDirections`](../modules/types_TidalTypes.md#orderdirections) | `'ASC'` | OrderDirections = 'ASC', |
+
+#### Returns
+
+`Promise`<[`ArtistTracks`](../interfaces/types_api_ArtistTypes.ArtistTracks.md)[]\>
+
+.
+
+#### Defined in
+
+api/artists.ts:179
+
+___
+
+### getArtistVideos
+
+▸ **getArtistVideos**(`artistId`, `limit?`, `offset?`, `order?`, `orderDirection?`): `Promise`<[`Video`](../interfaces/types_api_VideoTypes.Video.md)[]\>
+
+It gets the artist videos from the Tidal API.
+
+**`Fulfil`**
+
+- The artist videos.
+
+**`Reject`**
+
+- The error as returned by Tidal.
+
+**`Example`**
+
+```ts
+const artist = await tidal.getArtistVideos(3529689, 1);
+console.log(artist);
+// {
+//   [
+//     {
+//       "id": 143147453,
+//       "title": "Atomised",
+//       "volumeNumber": 1,
+//       "trackNumber": 1,
+//       "releaseDate": "2020-06-16T00:00:00.000+0000",
+//       "imagePath": null,
+//       "imageId": "2ef62a00-e310-48ab-afc2-f8cb76757968",
+//       "duration": 263,
+//       "quality": "MP4_1080P",
+//       "streamReady": true,
+//       "streamStartDate": "2020-06-17T11:00:00.000+0000",
+//       "allowStreaming": true,
+//       "explicit": false,
+//       "popularity": 2,
+//       "type": "Music Video",
+//       "adsUrl": null,
+//       "adsPrePaywallOnly": true,
+//       "artist": {
+//           "id": 4764457,
+//           "name": "GoGo Penguin",
+//           "type": "MAIN"
+//       },
+//       "artists": [
+//           {
+//           "id": 4764457,
+//           "name": "GoGo Penguin",
+//           "type": "MAIN"
+//           }
+//       ],
+//       "album": null
+//     },
+//   ]
+// }
+```
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `artistId` | `number` | `undefined` | The ID of the artist you want to get. |
+| `limit?` | `number` | `10` | The number of results to return. |
+| `offset?` | `number` | `0` | The offset of the first song to return. |
+| `order?` | [`OrderTypes`](../modules/types_TidalTypes.md#ordertypes) | `'DATE'` | OrderTypes = 'DATE', |
+| `orderDirection?` | [`OrderDirections`](../modules/types_TidalTypes.md#orderdirections) | `'ASC'` | OrderDirections = 'ASC', |
+
+#### Returns
+
+`Promise`<[`Video`](../interfaces/types_api_VideoTypes.Video.md)[]\>
+
+.
+
+#### Defined in
+
+api/artists.ts:247
