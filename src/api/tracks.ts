@@ -1,6 +1,6 @@
-import { Tidal } from '..';
+import { Tidal } from '../index.js';
 
-import { Track } from '../types';
+import { Contributor, Track } from '../types';
 
 export class Tracks {
   private client: Tidal;
@@ -12,21 +12,25 @@ export class Tracks {
   /**
    * It gets the track information from the Tidal API.
    * @param {number} trackId - The ID of the track you want to get.
-   * @returns TidalTrack.
+   * @returns {Promise}.
+   * @fulfil {Track} - a track object
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getTrack(trackId: number) {
     const response = await this.client._request(`tracks/${trackId}`);
-    return response as unknown as Track;
+    return response as Track;
   }
 
   /**
-   * It gets the track information from the Tidal API.
+   * It gets the contributors of a track from the Tidal API.
    * @param {number} trackId - The ID of the track you want to get.
-   * @returns TidalTrack.
+   * @returns {Promise}.
+   * @fulfil {Contributor[]} - an array of contributor objects
+   * @reject {Error} - The error as returned by Tidal.
    **/
   public async getTrackContributors(trackId: number) {
     const { items } = await this.client._request(`tracks/${trackId}/contributors`);
-    return items;
+    return items as Contributor[];
   }
 
   /**
