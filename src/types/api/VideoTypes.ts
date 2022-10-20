@@ -1,4 +1,4 @@
-import { TrackArtist } from './TrackTypes';
+import { TrackArtist } from './TrackTypes.js';
 
 export interface Video {
   id: number;

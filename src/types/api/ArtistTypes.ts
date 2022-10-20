@@ -1,4 +1,4 @@
-import { Track } from '.';
+import { Track } from './index.js';
 
 export interface Artist {
   id: number;

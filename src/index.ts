@@ -1,8 +1,8 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 
-import { Albums, Artists, Playlists, Tracks } from './api';
+import { Albums, Artists, Playlists, Tracks } from './api/index.js';
 
-import { ClientOptions, Country, RequestOptions, searchType } from './types';
+import { ClientOptions, Country, RequestOptions, searchType } from './types/index.js';
 
 export class Tidal {
   private options: ClientOptions;
@@ -77,9 +77,9 @@ export class Tidal {
           ...options?.headers,
         },
         data: options?.body,
-      }) as AxiosResponse;
+      });
       return data;
-    } catch (error: AxiosResponse | any) {
+    } catch (error: any) {
       if (!error.response) throw error;
       else if (error.response.status == 404) throw error.response.data;
       else if (error.response.status == 429) {

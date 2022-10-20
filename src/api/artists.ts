@@ -1,4 +1,4 @@
-import { Tidal } from '..';
+import { Tidal } from '../index.js';
 
 import {
   Album,
@@ -9,7 +9,7 @@ import {
   OrderDirections,
   OrderTypes,
   Video,
-} from '../types';
+} from '../types/index.js';
 
 export class Artists {
   private client: Tidal;
@@ -21,7 +21,7 @@ export class Artists {
   /**
    * It gets the artist information from the Tidal API.
    * @param {number} artistId - The ID of the artist you want to get.
-   * @returns {Promise}.
+   * @returns {Promise} - The artist information.
    * @fulfil {Artist} - The artist.
    * @reject {Error} - The error as returned by Tidal.
    * @example
@@ -71,9 +71,9 @@ export class Artists {
   }
 
   /**
-   * It gets the artist information from the Tidal API.
+   * It gets the artist bio from the Tidal API.
    * @param {number} artistId - The ID of the artist you want to get.
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to the artist bio.
    * @fulfil {ArtistBio} - The artist bio.
    * @reject {Error} - The error as returned by Tidal.
    * @example
@@ -98,7 +98,7 @@ export class Artists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to the artist mix.
    * @fulfil {ArtistMix} - The artist mix.
    * @reject {Error} - The error as returned by Tidal.
    * @example
@@ -120,7 +120,7 @@ export class Artists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to the artist top tracks.
    * @fulfil {Track[]} - The artist top tracks.
    * @reject {Error} - The error as returned by Tidal.
    * @example
@@ -201,7 +201,7 @@ export class Artists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to the artist videos.
    * @fulfil {Video[]} - The artist videos.
    * @reject {Error} - The error as returned by Tidal.
    * @example
@@ -269,7 +269,7 @@ export class Artists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to the artist albums.
    * @fulfil {Album[]} - The artist albums.
    * @reject {Error} - The error as returned by Tidal.
    * @example

@@ -1,6 +1,6 @@
-import { Tidal } from '..';
+import { Tidal } from '../index.js';
 
-import { Contributor, Track } from '../types';
+import { Contributor, Track } from '../types/index.js';
 
 export class Tracks {
   private client: Tidal;
@@ -12,7 +12,7 @@ export class Tracks {
   /**
    * It gets the track information from the Tidal API.
    * @param {number} trackId - The ID of the track you want to get.
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to a track object.
    * @fulfil {Track} - a track object
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -24,7 +24,7 @@ export class Tracks {
   /**
    * It gets the contributors of a track from the Tidal API.
    * @param {number} trackId - The ID of the track you want to get.
-   * @returns {Promise}.
+   * @returns {Promise} - A promise that resolves to an array of contributor objects.
    * @fulfil {Contributor[]} - an array of contributor objects
    * @reject {Error} - The error as returned by Tidal.
    **/

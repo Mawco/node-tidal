@@ -1,7 +1,7 @@
 import { describe } from 'mocha';
 import { expect } from 'chai';
 
-import { Tidal } from '../src';
+import { Tidal } from '../src/index.js'
 
 describe('artists', () => {
   let tidal: Tidal;

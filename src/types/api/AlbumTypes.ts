@@ -1,4 +1,4 @@
-import { Track, TrackArtist } from './TrackTypes';
+import { Track, TrackArtist } from './TrackTypes.js';
 
 export interface Album {
   id: number;

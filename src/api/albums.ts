@@ -1,6 +1,6 @@
-import { Tidal } from '..';
+import { Tidal } from '../index.js';
 
-import { Album, AlbumCredits, AlbumTracksWithCredits, Track } from '../types';
+import { Album, AlbumCredits, AlbumTracksWithCredits, Track } from '../types/index.js';
 
 export class Albums {
   private client: Tidal;
@@ -12,7 +12,7 @@ export class Albums {
   /**
    * It gets the album information from the Tidal API.
    * @param {number} albumId - The ID of the album you want to get.
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an album object.
    * @fulfil {Album} - an album object
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -24,7 +24,7 @@ export class Albums {
   /**
    * It gets the album credits from the Tidal API.
    * @param {number} albumId - The ID of the album you want to get.
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of album credits object.
    * @fulfil {AlbumCredits} - an album credits object
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -36,7 +36,7 @@ export class Albums {
   /**
    * It gets the tracks of a album from the Tidal API
    * @param {number} albumId - The ID of the album you want to get the tracks for.
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of track objects.
    * @fulfil {Track[]} - an array of track objects
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -48,7 +48,7 @@ export class Albums {
   /**
    * It gets the tracks & the credits of a albums from the Tidal API
    * @param {number} albumId - The ID of the album you want to get the tracks for.
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of track objects.
    * @fulfil {Album} - an album object
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -59,7 +59,7 @@ export class Albums {
 
   /**
    * It gets featured albums on Tidal from the Tidal API
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an object with featured albums.
    * @fulfil {Album[]} - an array of album objects
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -78,7 +78,7 @@ export class Albums {
 
   /**
    * It gets the top 20 albums on Tidal from the Tidal API
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of album objects.
    * @fulfil {ALbum[]} - an array of album objects
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -89,7 +89,7 @@ export class Albums {
 
   /**
    * It gets new albums on Tidal from the Tidal API
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of album objects.
    * @fulfil {ALbum[]} - an array of album objects
    * @reject {Error} - The error as returned by Tidal.
    */
@@ -100,7 +100,7 @@ export class Albums {
 
   /**
    * It gets staff pick albums on Tidal from the Tidal API
-   * @returns {Promise}
+   * @returns {Promise} - A promise that resolves to an array of album objects.
    * @fulfil {ALbum[]} - an array of album objects
    * @reject {Error} - The error as returned by Tidal.
    */

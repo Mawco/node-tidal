@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { describe } from 'mocha';
 
-import { Tidal } from '../src';
-import { Playlist } from '../src/types';
+import { Tidal } from '../src/index.js'
+import { Playlist } from '../src/types/index.js';
 
 describe('playlist', () => {
   let tidal: Tidal;

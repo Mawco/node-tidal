@@ -8,7 +8,7 @@ import {
   Playlist,
   PlaylistFolders,
   PlaylistTracks,
-} from '../types';
+} from '../types/index.js';
 
 export class Playlists {
   private client: Tidal;
@@ -20,9 +20,9 @@ export class Playlists {
   /**
    * It gets the playlist information from the Tidal API.
    * @param {string} playlistId - The ID of the playlist you want to get the information of.
-   * @returns {Promise}.
-   * @fulfil {Playlist} - The playlist information
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the playlist information.
+   * @fulfil {Playlist} - The playlist information.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getPlaylist(playlistId: string) {
     const response = await this.client._request(`playlists/${playlistId}`);
@@ -36,9 +36,9 @@ export class Playlists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC',
-   * @returns {Promise}.
-   * @fulfil {PlaylistSongs} - The songs from the playlist
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the playlist tracks information.
+   * @fulfil {PlaylistSongs} - The songs from the playlist.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getPlaylistTracks(
     playlistId: string,
@@ -57,6 +57,7 @@ export class Playlists {
     });
     return items as PlaylistTracks[];
   }
+
   /**
    * It gets all the plalist folders and root playlists from the user's account.
    * @param {string} [folderId='root'] - The id of the folder you want to get the playlists from.
@@ -65,9 +66,9 @@ export class Playlists {
    * @param {number} [offset=0] - The offset of the first song to return.
    * @param {OrderTypes} [order=DATE] - OrderTypes = 'DATE',
    * @param {OrderDirections} [orderDirection=DESC] - OrderDirections = 'DESC',
-   * @returns {Promise}.
-   * @fulfil {PlaylistFolders} - The playlist folders and root playlists
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the playlist folders information.
+   * @fulfil {PlaylistFolders} - The playlist folders and root playlists.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async getPlaylistFolders(
     folderId: string = 'root',
@@ -95,9 +96,9 @@ export class Playlists {
    * It gets the image url of a playlist by a given playlist.data.squareImage
    * @param {string} squareImage - The squareImage of the playlist
    * @param {ImageResolution} [resolution=ImageResolution.Medium] - The resolution of the image
-   * @returns {string} - The image url of the playlist
-   * @fulfil {string} - The image url of the playlist
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {string} - The image url of the playlist.
+   * @fulfil {string} - The image url of the playlist.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public getPlaylistImage(squareImage: string, resolution: ImageResolutionEnum = ImageResolutionEnum.Medium) {
     const IMAGE_BASE_URL = 'https://resources.tidal.com/images/';
@@ -108,9 +109,9 @@ export class Playlists {
    * It creates a playlist in the root folder of the user's collection
    * @param {string} name - The name of the playlist
    * @param {string} [description] - The description of the playlist
-   * @returns {Promise}.
-   * @fulfil {Playlist} - The playlist information
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the created playlist information.
+   * @fulfil {Playlist} - The playlist information.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async createPlaylist(name: string, description?: string) {
     const response = await this.client._request(`my-collection/playlists/folders/create-playlist`, {
@@ -128,9 +129,9 @@ export class Playlists {
   /**
    * It deletes a playlist from the user's account.
    * @param {string} playlistId - The id of the playlist you want to delete
-   * @returns {Promise}.
-   * @fulfil {string} - The status of the operation
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the deleted playlists information.
+   * @fulfil {string} - The status of the operation.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async deletePlaylist(playlistId: string) {
     const playlist = await this.getPlaylist(playlistId);
@@ -150,9 +151,9 @@ export class Playlists {
    * It takes a folderId as a parameter, and returns a Deleted object with a status of 'Success' or
    * 'Failed' and the folderId.
    * @param {string} folderId - The id of the folder you want to delete
-   * @returns {Promise}.
-   * @fulfil {string} - The status of the operation
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the deleted folder.
+   * @fulfil {string} - The status of the operation.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async deleteFolder(folderId: string) {
     if (!folderId) throw new Error('PlaylistId not specified');
@@ -173,9 +174,9 @@ export class Playlists {
    * @param {any} trackIds - The ID of the track you want to add to the playlist.
    * @param {OnDupes} [onDupes=FAIL] - This is the action to take if the song is already in the
    * playlist.
-   * @returns {Promise}.
-   * @fulfil {string} - The status of the operation
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the added song.
+   * @fulfil {string} - The status of the operation.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async addTrackToPlaylist(playlistId: string, trackIds: any, onDupes: OnDupes = 'FAIL') {
     const response = await this.client._request(`playlists/${playlistId}/items`, {
@@ -198,9 +199,9 @@ export class Playlists {
    * @param {number} index - The index of the song you want to delete
    * @param {OrderTypes} [order=INDEX] - OrderTypes = 'INDEX'
    * @param {OrderDirections} [orderDirection=ASC] - OrderDirections = 'ASC'
-   * @returns {Promise}.
-   * @fulfil {string} - The status of the operation
-   * @reject {Error} - The error as returned by Tidal
+   * @returns {Promise} - A promise that resolves to the deleted song.
+   * @fulfil {string} - The status of the operation.
+   * @reject {Error} - The error as returned by Tidal.
    */
   public async deleteTrackFromPlaylist(
     playlistId: string,

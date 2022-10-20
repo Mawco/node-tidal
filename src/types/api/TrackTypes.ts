@@ -1,4 +1,4 @@
-import { audioQuality } from '../TidalTypes';
+import { audioQuality } from '../TidalTypes.js';
 
 export interface Track {
   id: number;

@@ -1,2 +1,2 @@
-export * from './ClientTypes';
-export * from './api';
+export * from './ClientTypes.js';
+export * from './api/index.js';
