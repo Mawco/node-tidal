@@ -19,7 +19,7 @@
 
 #### Defined in
 
-types/api/AlbumTypes.ts:33
+[types/api/AlbumTypes.ts:33](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L33)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:32
+[types/api/AlbumTypes.ts:32](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L32)

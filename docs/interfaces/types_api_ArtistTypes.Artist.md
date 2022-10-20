@@ -25,7 +25,7 @@
 
 #### Defined in
 
-types/api/ArtistTypes.ts:10
+[types/api/ArtistTypes.ts:10](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L10)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:6
+[types/api/ArtistTypes.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L6)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:4
+[types/api/ArtistTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L4)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:11
+[types/api/ArtistTypes.ts:11](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L11)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:5
+[types/api/ArtistTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L5)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:8
+[types/api/ArtistTypes.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L8)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:9
+[types/api/ArtistTypes.ts:9](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L9)
 
 ___
 
@@ -102,4 +102,4 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:7
+[types/api/ArtistTypes.ts:7](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L7)

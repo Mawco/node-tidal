@@ -1,4 +1,4 @@
-import { Tidal } from '../index.js';
+import { Tidal } from '..';
 
 import {
   Album,
@@ -9,7 +9,7 @@ import {
   OrderDirections,
   OrderTypes,
   Video,
-} from '../types/index.js';
+} from '../types';
 
 export class Artists {
   private client: Tidal;

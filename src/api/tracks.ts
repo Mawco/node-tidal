@@ -1,4 +1,4 @@
-import { Tidal } from '../index.js';
+import { Tidal } from '..';
 
 import { Contributor, Track } from '../types';
 

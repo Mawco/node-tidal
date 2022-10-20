@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[types/TidalTypes.ts:3](https://github.com/Mawco/node-tidal/blob/c586890/src/types/TidalTypes.ts#L3)
+[types/TidalTypes.ts:3](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L3)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[types/TidalTypes.ts:2](https://github.com/Mawco/node-tidal/blob/c586890/src/types/TidalTypes.ts#L2)
+[types/TidalTypes.ts:2](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L2)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[types/TidalTypes.ts:1](https://github.com/Mawco/node-tidal/blob/c586890/src/types/TidalTypes.ts#L1)
+[types/TidalTypes.ts:1](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L1)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[types/TidalTypes.ts:5](https://github.com/Mawco/node-tidal/blob/c586890/src/types/TidalTypes.ts#L5)
+[types/TidalTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L5)
 
 ___
 
@@ -67,4 +67,4 @@ ___
 
 #### Defined in
 
-[types/TidalTypes.ts:4](https://github.com/Mawco/node-tidal/blob/c586890/src/types/TidalTypes.ts#L4)
+[types/TidalTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L4)

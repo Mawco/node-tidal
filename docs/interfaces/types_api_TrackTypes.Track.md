@@ -44,7 +44,7 @@
 
 #### Defined in
 
-types/api/TrackTypes.ts:26
+[types/api/TrackTypes.ts:26](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L26)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:9
+[types/api/TrackTypes.ts:9](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L9)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:24
+[types/api/TrackTypes.ts:24](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L24)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:25
+[types/api/TrackTypes.ts:25](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L25)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:23
+[types/api/TrackTypes.ts:23](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L23)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:22
+[types/api/TrackTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L22)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:17
+[types/api/TrackTypes.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L17)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:30
+[types/api/TrackTypes.ts:30](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L30)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:6
+[types/api/TrackTypes.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L6)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:20
+[types/api/TrackTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L20)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:21
+[types/api/TrackTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L21)
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:4
+[types/api/TrackTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L4)
 
 ___
 
@@ -164,7 +164,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:31
+[types/api/TrackTypes.ts:31](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L31)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:19
+[types/api/TrackTypes.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L19)
 
 ___
 
@@ -184,7 +184,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:32
+[types/api/TrackTypes.ts:32](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L32)
 
 ___
 
@@ -200,7 +200,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:27
+[types/api/TrackTypes.ts:27](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L27)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:8
+[types/api/TrackTypes.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L8)
 
 ___
 
@@ -220,7 +220,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:16
+[types/api/TrackTypes.ts:16](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L16)
 
 ___
 
@@ -230,7 +230,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:12
+[types/api/TrackTypes.ts:12](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L12)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:7
+[types/api/TrackTypes.ts:7](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L7)
 
 ___
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:10
+[types/api/TrackTypes.ts:10](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L10)
 
 ___
 
@@ -260,7 +260,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:11
+[types/api/TrackTypes.ts:11](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L11)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:5
+[types/api/TrackTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L5)
 
 ___
 
@@ -280,7 +280,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:13
+[types/api/TrackTypes.ts:13](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L13)
 
 ___
 
@@ -290,7 +290,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:18
+[types/api/TrackTypes.ts:18](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L18)
 
 ___
 
@@ -300,7 +300,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:15
+[types/api/TrackTypes.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L15)
 
 ___
 
@@ -310,4 +310,4 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:14
+[types/api/TrackTypes.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L14)

@@ -42,7 +42,7 @@
 
 #### Defined in
 
-types/api/AlbumTypes.ts:9
+[types/api/AlbumTypes.ts:9](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L9)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:27
+[types/api/AlbumTypes.ts:27](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L27)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:28
+[types/api/AlbumTypes.ts:28](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L28)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:26
+[types/api/AlbumTypes.ts:26](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L26)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:25
+[types/api/AlbumTypes.ts:25](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L25)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:15
+[types/api/AlbumTypes.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L15)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:19
+[types/api/AlbumTypes.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L19)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:6
+[types/api/AlbumTypes.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L6)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:22
+[types/api/AlbumTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L22)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:4
+[types/api/AlbumTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L4)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:11
+[types/api/AlbumTypes.ts:11](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L11)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:12
+[types/api/AlbumTypes.ts:12](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L12)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:13
+[types/api/AlbumTypes.ts:13](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L13)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:24
+[types/api/AlbumTypes.ts:24](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L24)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:10
+[types/api/AlbumTypes.ts:10](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L10)
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:14
+[types/api/AlbumTypes.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L14)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:7
+[types/api/AlbumTypes.ts:7](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L7)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:8
+[types/api/AlbumTypes.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L8)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:5
+[types/api/AlbumTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L5)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:16
+[types/api/AlbumTypes.ts:16](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L16)
 
 ___
 
@@ -242,7 +242,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:23
+[types/api/AlbumTypes.ts:23](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L23)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:18
+[types/api/AlbumTypes.ts:18](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L18)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:17
+[types/api/AlbumTypes.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L17)
 
 ___
 
@@ -272,7 +272,7 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:20
+[types/api/AlbumTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L20)
 
 ___
 
@@ -282,4 +282,4 @@ ___
 
 #### Defined in
 
-types/api/AlbumTypes.ts:21
+[types/api/AlbumTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L21)

@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[api/albums.ts:8](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L8)
+[api/albums.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L8)
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[api/albums.ts:6](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L6)
+[api/albums.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L6)
 
 ## Methods
 
@@ -79,7 +79,7 @@ It gets the album information from the Tidal API.
 
 #### Defined in
 
-[api/albums.ts:19](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L19)
+[api/albums.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L19)
 
 ___
 
@@ -109,7 +109,7 @@ It gets the album credits from the Tidal API.
 
 #### Defined in
 
-[api/albums.ts:31](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L31)
+[api/albums.ts:31](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L31)
 
 ___
 
@@ -139,7 +139,7 @@ It gets the tracks of a album from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:43](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L43)
+[api/albums.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L43)
 
 ___
 
@@ -169,7 +169,7 @@ It gets the tracks & the credits of a albums from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:55](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L55)
+[api/albums.ts:55](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L55)
 
 ___
 
@@ -193,7 +193,7 @@ It gets featured albums on Tidal from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:66](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L66)
+[api/albums.ts:66](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L66)
 
 ___
 
@@ -217,7 +217,7 @@ It gets new albums on Tidal from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:96](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L96)
+[api/albums.ts:96](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L96)
 
 ___
 
@@ -241,7 +241,7 @@ It gets staff pick albums on Tidal from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:107](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L107)
+[api/albums.ts:107](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L107)
 
 ___
 
@@ -265,4 +265,4 @@ It gets the top 20 albums on Tidal from the Tidal API
 
 #### Defined in
 
-[api/albums.ts:85](https://github.com/Mawco/node-tidal/blob/c586890/src/api/albums.ts#L85)
+[api/albums.ts:85](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L85)

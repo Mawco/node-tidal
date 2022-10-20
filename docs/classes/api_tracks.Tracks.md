@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[api/tracks.ts:8](https://github.com/Mawco/node-tidal/blob/c586890/src/api/tracks.ts#L8)
+[api/tracks.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/tracks.ts#L8)
 
 ## Properties
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[api/tracks.ts:6](https://github.com/Mawco/node-tidal/blob/c586890/src/api/tracks.ts#L6)
+[api/tracks.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/tracks.ts#L6)
 
 ## Methods
 
@@ -75,7 +75,7 @@ It gets the track information from the Tidal API.
 
 #### Defined in
 
-[api/tracks.ts:19](https://github.com/Mawco/node-tidal/blob/c586890/src/api/tracks.ts#L19)
+[api/tracks.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/tracks.ts#L19)
 
 ___
 
@@ -107,4 +107,4 @@ It gets the contributors of a track from the Tidal API.
 
 #### Defined in
 
-[api/tracks.ts:31](https://github.com/Mawco/node-tidal/blob/c586890/src/api/tracks.ts#L31)
+[api/tracks.ts:31](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/tracks.ts#L31)

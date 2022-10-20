@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 import { Albums, Artists, Playlists, Tracks } from './api';
 
@@ -77,18 +77,18 @@ export class Tidal {
           ...options?.headers,
         },
         data: options?.body,
-      });
+      }) as AxiosResponse;
       return data;
-    } catch (error: any) {
+    } catch (error: AxiosResponse | any) {
       if (!error.response) throw error;
-      else if (error.response.status == 404) throw error;
+      else if (error.response.status == 404) throw error.response.data;
       else if (error.response.status == 429) {
         const retryAfter = error.response.headers['Retry-After'];
         if (typeof retryAfter == 'number') await new Promise((r) => setTimeout(r, retryAfter * 1000));
         return this._request(url, options);
         // @ts-ignore
       } else if (error.response.status == 401) throw new Error('Invalid access token');
-      else throw error;
+      else throw error.response.data;
     }
   }
 }

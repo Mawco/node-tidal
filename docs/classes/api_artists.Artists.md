@@ -37,7 +37,7 @@
 
 #### Defined in
 
-api/artists.ts:17
+[api/artists.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L17)
 
 ## Properties
 
@@ -47,7 +47,7 @@ api/artists.ts:17
 
 #### Defined in
 
-api/artists.ts:15
+[api/artists.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L15)
 
 ## Methods
 
@@ -123,7 +123,7 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:68
+[api/artists.ts:68](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L68)
 
 ___
 
@@ -209,7 +209,7 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:322
+[api/artists.ts:322](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L322)
 
 ___
 
@@ -254,7 +254,7 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:89
+[api/artists.ts:89](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L89)
 
 ___
 
@@ -296,7 +296,7 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:111
+[api/artists.ts:111](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L111)
 
 ___
 
@@ -388,7 +388,7 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:179
+[api/artists.ts:179](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L179)
 
 ___
 
@@ -467,4 +467,4 @@ console.log(artist);
 
 #### Defined in
 
-api/artists.ts:247
+[api/artists.ts:247](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L247)

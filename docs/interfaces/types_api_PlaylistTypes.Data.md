@@ -41,7 +41,7 @@
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:40
+[types/api/PlaylistTypes.ts:40](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L40)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:41
+[types/api/PlaylistTypes.ts:41](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L41)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:42
+[types/api/PlaylistTypes.ts:42](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L42)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:43
+[types/api/PlaylistTypes.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L43)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:44
+[types/api/PlaylistTypes.ts:44](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L44)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:45
+[types/api/PlaylistTypes.ts:45](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L45)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:46
+[types/api/PlaylistTypes.ts:46](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L46)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:47
+[types/api/PlaylistTypes.ts:47](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L47)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:48
+[types/api/PlaylistTypes.ts:48](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L48)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:49
+[types/api/PlaylistTypes.ts:49](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L49)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:50
+[types/api/PlaylistTypes.ts:50](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L50)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:51
+[types/api/PlaylistTypes.ts:51](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L51)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:52
+[types/api/PlaylistTypes.ts:52](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L52)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:53
+[types/api/PlaylistTypes.ts:53](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L53)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:54
+[types/api/PlaylistTypes.ts:54](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L54)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:55
+[types/api/PlaylistTypes.ts:55](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L55)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:56
+[types/api/PlaylistTypes.ts:56](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L56)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:57
+[types/api/PlaylistTypes.ts:57](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L57)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:58
+[types/api/PlaylistTypes.ts:58](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L58)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:59
+[types/api/PlaylistTypes.ts:59](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L59)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:60
+[types/api/PlaylistTypes.ts:60](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L60)
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:61
+[types/api/PlaylistTypes.ts:61](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L61)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:62
+[types/api/PlaylistTypes.ts:62](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L62)
 
 ___
 
@@ -271,4 +271,4 @@ ___
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:63
+[types/api/PlaylistTypes.ts:63](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L63)

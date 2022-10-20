@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[api/playlists.ts:16](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L16)
+[api/playlists.ts:16](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L16)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[api/playlists.ts:14](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L14)
+[api/playlists.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L14)
 
 ## Methods
 
@@ -84,7 +84,7 @@ It adds a song to a playlist.
 
 #### Defined in
 
-[api/playlists.ts:180](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L180)
+[api/playlists.ts:180](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L180)
 
 ___
 
@@ -117,7 +117,7 @@ It creates a playlist in the root folder of the user's collection
 
 #### Defined in
 
-[api/playlists.ts:115](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L115)
+[api/playlists.ts:115](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L115)
 
 ___
 
@@ -150,7 +150,7 @@ It takes a folderId as a parameter, and returns a Deleted object with a status o
 
 #### Defined in
 
-[api/playlists.ts:157](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L157)
+[api/playlists.ts:157](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L157)
 
 ___
 
@@ -182,7 +182,7 @@ It deletes a playlist from the user's account.
 
 #### Defined in
 
-[api/playlists.ts:135](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L135)
+[api/playlists.ts:135](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L135)
 
 ___
 
@@ -217,7 +217,7 @@ It deletes a song from a playlist
 
 #### Defined in
 
-[api/playlists.ts:205](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L205)
+[api/playlists.ts:205](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L205)
 
 ___
 
@@ -249,7 +249,7 @@ It gets the playlist information from the Tidal API.
 
 #### Defined in
 
-[api/playlists.ts:27](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L27)
+[api/playlists.ts:27](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L27)
 
 ___
 
@@ -286,7 +286,7 @@ It gets all the plalist folders and root playlists from the user's account.
 
 #### Defined in
 
-[api/playlists.ts:72](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L72)
+[api/playlists.ts:72](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L72)
 
 ___
 
@@ -319,7 +319,7 @@ It gets the image url of a playlist by a given playlist.data.squareImage
 
 #### Defined in
 
-[api/playlists.ts:102](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L102)
+[api/playlists.ts:102](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L102)
 
 ___
 
@@ -355,4 +355,4 @@ It gets the songs from a playlist.
 
 #### Defined in
 
-[api/playlists.ts:43](https://github.com/Mawco/node-tidal/blob/c586890/src/api/playlists.ts#L43)
+[api/playlists.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L43)

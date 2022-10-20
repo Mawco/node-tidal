@@ -20,7 +20,7 @@
 
 #### Defined in
 
-types/api/TrackTypes.ts:36
+[types/api/TrackTypes.ts:36](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L36)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:37
+[types/api/TrackTypes.ts:37](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L37)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-types/api/TrackTypes.ts:38
+[types/api/TrackTypes.ts:38](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L38)

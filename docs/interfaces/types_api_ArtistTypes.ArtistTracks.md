@@ -20,7 +20,7 @@
 
 #### Defined in
 
-types/api/ArtistTypes.ts:20
+[types/api/ArtistTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L20)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:18
+[types/api/ArtistTypes.ts:18](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L18)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-types/api/ArtistTypes.ts:19
+[types/api/ArtistTypes.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L19)

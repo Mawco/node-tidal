@@ -18,4 +18,4 @@
 
 #### Defined in
 
-types/api/PlaylistTypes.ts:67
+[types/api/PlaylistTypes.ts:67](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L67)

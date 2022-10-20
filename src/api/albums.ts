@@ -1,4 +1,4 @@
-import { Tidal } from '../index.js';
+import { Tidal } from '..';
 
 import { Album, AlbumCredits, AlbumTracksWithCredits, Track } from '../types';
 
