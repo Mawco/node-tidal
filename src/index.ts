@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Albums, Playlists, Tracks } from './api';
+import { Albums, Artists, Playlists, Tracks } from './api';
 
 import { ClientOptions, Country, RequestOptions, searchType } from './types';
 
@@ -9,8 +9,9 @@ export class Tidal {
 
   public countryCode: Country;
 
-  public playlists: Playlists;
   public albums: Albums;
+  public artists: Artists;
+  public playlists: Playlists;
   public tracks: Tracks;
 
   constructor(options: ClientOptions) {
@@ -19,6 +20,7 @@ export class Tidal {
     this.countryCode = options.countryCode;
 
     this.albums = new Albums(this);
+    this.artists = new Artists(this);
     this.playlists = new Playlists(this);
     this.tracks = new Tracks(this);
   }
@@ -30,6 +32,10 @@ export class Tidal {
    * @param {number} [limit=50] - The amount of results to return.
    * @param {number} [offset=0] - The offset of the results.
    * @returns The results of the search.
+   * @example
+   * const results = await tidal.search('The Weeknd', 'tracks');
+   * console.log(results);
+   * // => { totalNumberOfItems: 100, limit: 50, offset: 0, items: [...] }
    **/
   public async search(
     query: string,
@@ -60,7 +66,7 @@ export class Tidal {
   public async _request(url: string, options?: RequestOptions): Promise<any> {
     try {
       const { data } = await axios({
-        url: `https://${options?.modes || 'desktop'}.tidal.com/${options?.versions || 'v1'}/${url}`,
+        url: `https://api.tidal.com/${options?.versions || 'v1'}/${url}`,
         method: options?.method || 'GET',
         params: { ...options?.params, countryCode: this.options.countryCode, deviceType: 'BROWSER' },
         headers: {
