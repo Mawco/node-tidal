@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types/api/ArtistTypes.ts:32](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L32)
+[types/api/ArtistTypes.ts:32](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/ArtistTypes.ts#L32)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[types/api/ArtistTypes.ts:31](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L31)
+[types/api/ArtistTypes.ts:31](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/ArtistTypes.ts#L31)

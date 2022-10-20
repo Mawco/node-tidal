@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types/TidalTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L20)
+[types/TidalTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7587986/src/types/TidalTypes.ts#L20)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[types/TidalTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/TidalTypes.ts#L21)
+[types/TidalTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7587986/src/types/TidalTypes.ts#L21)

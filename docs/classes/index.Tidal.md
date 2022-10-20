@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[index.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L17)
+[index.ts:17](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L17)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[index.ts:12](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L12)
+[index.ts:12](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L12)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[index.ts:13](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L13)
+[index.ts:13](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L13)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[index.ts:10](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L10)
+[index.ts:10](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L10)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[index.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L8)
+[index.ts:8](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L8)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[index.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L14)
+[index.ts:14](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L14)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[index.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L15)
+[index.ts:15](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L15)
 
 ## Methods
 
@@ -124,7 +124,7 @@ The data from the request.
 
 #### Defined in
 
-[index.ts:66](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L66)
+[index.ts:66](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L66)
 
 ___
 
@@ -160,4 +160,4 @@ The results of the search.
 
 #### Defined in
 
-[index.ts:40](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/index.ts#L40)
+[index.ts:40](https://github.com/Mawco/node-tidal/blob/7587986/src/index.ts#L40)

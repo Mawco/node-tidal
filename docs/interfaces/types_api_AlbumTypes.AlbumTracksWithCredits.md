@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[types/api/AlbumTypes.ts:39](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L39)
+[types/api/AlbumTypes.ts:39](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/AlbumTypes.ts#L39)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/api/AlbumTypes.ts:37](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L37)
+[types/api/AlbumTypes.ts:37](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/AlbumTypes.ts#L37)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[types/api/AlbumTypes.ts:38](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/AlbumTypes.ts#L38)
+[types/api/AlbumTypes.ts:38](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/AlbumTypes.ts#L38)

@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[types/ClientTypes.ts:1](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/ClientTypes.ts#L1)
+[types/ClientTypes.ts:1](https://github.com/Mawco/node-tidal/blob/7587986/src/types/ClientTypes.ts#L1)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[types/ClientTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/ClientTypes.ts#L20)
+[types/ClientTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7587986/src/types/ClientTypes.ts#L20)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 #### Defined in
 
-[types/ClientTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/ClientTypes.ts#L22)
+[types/ClientTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7587986/src/types/ClientTypes.ts#L22)

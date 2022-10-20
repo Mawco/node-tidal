@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[types/api/ArtistTypes.ts:36](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/ArtistTypes.ts#L36)
+[types/api/ArtistTypes.ts:36](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/ArtistTypes.ts#L36)

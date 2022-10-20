@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[api/playlists.ts:16](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L16)
+[api/playlists.ts:16](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L16)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[api/playlists.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L14)
+[api/playlists.ts:14](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L14)
 
 ## Methods
 
@@ -62,11 +62,11 @@ It adds a song to a playlist.
 
 **`Fulfil`**
 
-- The status of the operation
+- The status of the operation.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -80,11 +80,11 @@ It adds a song to a playlist.
 
 `Promise`<`any`\>
 
-.
+- A promise that resolves to the added song.
 
 #### Defined in
 
-[api/playlists.ts:180](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L180)
+[api/playlists.ts:181](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L181)
 
 ___
 
@@ -96,11 +96,11 @@ It creates a playlist in the root folder of the user's collection
 
 **`Fulfil`**
 
-- The playlist information
+- The playlist information.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -113,11 +113,11 @@ It creates a playlist in the root folder of the user's collection
 
 `Promise`<`any`\>
 
-.
+- A promise that resolves to the created playlist information.
 
 #### Defined in
 
-[api/playlists.ts:115](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L115)
+[api/playlists.ts:116](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L116)
 
 ___
 
@@ -130,11 +130,11 @@ It takes a folderId as a parameter, and returns a Deleted object with a status o
 
 **`Fulfil`**
 
-- The status of the operation
+- The status of the operation.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -146,11 +146,11 @@ It takes a folderId as a parameter, and returns a Deleted object with a status o
 
 `Promise`<{ `folderId`: `string` ; `status`: `string` = 'Success' }\>
 
-.
+- A promise that resolves to the deleted folder.
 
 #### Defined in
 
-[api/playlists.ts:157](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L157)
+[api/playlists.ts:158](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L158)
 
 ___
 
@@ -162,11 +162,11 @@ It deletes a playlist from the user's account.
 
 **`Fulfil`**
 
-- The status of the operation
+- The status of the operation.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -178,11 +178,11 @@ It deletes a playlist from the user's account.
 
 `Promise`<{ `playlist`: [`Playlist`](../interfaces/types_api_PlaylistTypes.Playlist.md) ; `playlistId`: `string` ; `status`: `string` = 'Success' }\>
 
-.
+- A promise that resolves to the deleted playlists information.
 
 #### Defined in
 
-[api/playlists.ts:135](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L135)
+[api/playlists.ts:136](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L136)
 
 ___
 
@@ -194,11 +194,11 @@ It deletes a song from a playlist
 
 **`Fulfil`**
 
-- The status of the operation
+- The status of the operation.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -213,11 +213,11 @@ It deletes a song from a playlist
 
 `Promise`<{ `index`: `number` ; `playlistId`: `string` ; `song`: [`Track`](../interfaces/types_api_TrackTypes.Track.md) ; `status`: `string` = 'Success' } \| { `index`: `number` ; `playlistId`: `string` ; `song`: `undefined` ; `status`: `string` = 'Failed' }\>
 
-.
+- A promise that resolves to the deleted song.
 
 #### Defined in
 
-[api/playlists.ts:205](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L205)
+[api/playlists.ts:206](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L206)
 
 ___
 
@@ -229,11 +229,11 @@ It gets the playlist information from the Tidal API.
 
 **`Fulfil`**
 
-- The playlist information
+- The playlist information.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -245,11 +245,11 @@ It gets the playlist information from the Tidal API.
 
 `Promise`<[`Playlist`](../interfaces/types_api_PlaylistTypes.Playlist.md)\>
 
-.
+- A promise that resolves to the playlist information.
 
 #### Defined in
 
-[api/playlists.ts:27](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L27)
+[api/playlists.ts:27](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L27)
 
 ___
 
@@ -261,11 +261,11 @@ It gets all the plalist folders and root playlists from the user's account.
 
 **`Fulfil`**
 
-- The playlist folders and root playlists
+- The playlist folders and root playlists.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -282,11 +282,11 @@ It gets all the plalist folders and root playlists from the user's account.
 
 `Promise`<[`PlaylistFolders`](../interfaces/types_api_PlaylistTypes.PlaylistFolders.md)[]\>
 
-.
+- A promise that resolves to the playlist folders information.
 
 #### Defined in
 
-[api/playlists.ts:72](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L72)
+[api/playlists.ts:73](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L73)
 
 ___
 
@@ -298,11 +298,11 @@ It gets the image url of a playlist by a given playlist.data.squareImage
 
 **`Fulfil`**
 
-- The image url of the playlist
+- The image url of the playlist.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -315,11 +315,11 @@ It gets the image url of a playlist by a given playlist.data.squareImage
 
 `string`
 
-- The image url of the playlist
+- The image url of the playlist.
 
 #### Defined in
 
-[api/playlists.ts:102](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L102)
+[api/playlists.ts:103](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L103)
 
 ___
 
@@ -331,11 +331,11 @@ It gets the songs from a playlist.
 
 **`Fulfil`**
 
-- The songs from the playlist
+- The songs from the playlist.
 
 **`Reject`**
 
-- The error as returned by Tidal
+- The error as returned by Tidal.
 
 #### Parameters
 
@@ -351,8 +351,8 @@ It gets the songs from a playlist.
 
 `Promise`<[`PlaylistTracks`](../interfaces/types_api_PlaylistTypes.PlaylistTracks.md)[]\>
 
-.
+- A promise that resolves to the playlist tracks information.
 
 #### Defined in
 
-[api/playlists.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/playlists.ts#L43)
+[api/playlists.ts:43](https://github.com/Mawco/node-tidal/blob/7587986/src/api/playlists.ts#L43)

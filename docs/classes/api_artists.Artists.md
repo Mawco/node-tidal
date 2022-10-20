@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[api/artists.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L17)
+[api/artists.ts:17](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L17)
 
 ## Properties
 
@@ -47,7 +47,7 @@
 
 #### Defined in
 
-[api/artists.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L15)
+[api/artists.ts:15](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L15)
 
 ## Methods
 
@@ -119,11 +119,11 @@ console.log(artist);
 
 `Promise`<[`Artist`](../interfaces/types_api_ArtistTypes.Artist.md)\>
 
-.
+- The artist information.
 
 #### Defined in
 
-[api/artists.ts:68](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L68)
+[api/artists.ts:68](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L68)
 
 ___
 
@@ -205,11 +205,11 @@ console.log(artist);
 
 `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
 
-.
+- A promise that resolves to the artist albums.
 
 #### Defined in
 
-[api/artists.ts:322](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L322)
+[api/artists.ts:322](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L322)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 ▸ **getArtistBio**(`artistId`): `Promise`<[`ArtistBio`](../interfaces/types_api_ArtistTypes.ArtistBio.md)\>
 
-It gets the artist information from the Tidal API.
+It gets the artist bio from the Tidal API.
 
 **`Fulfil`**
 
@@ -250,11 +250,11 @@ console.log(artist);
 
 `Promise`<[`ArtistBio`](../interfaces/types_api_ArtistTypes.ArtistBio.md)\>
 
-.
+- A promise that resolves to the artist bio.
 
 #### Defined in
 
-[api/artists.ts:89](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L89)
+[api/artists.ts:89](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L89)
 
 ___
 
@@ -292,11 +292,11 @@ console.log(artist);
 
 `Promise`<[`ArtistMix`](../interfaces/types_api_ArtistTypes.ArtistMix.md)\>
 
-.
+- A promise that resolves to the artist mix.
 
 #### Defined in
 
-[api/artists.ts:111](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L111)
+[api/artists.ts:111](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L111)
 
 ___
 
@@ -384,11 +384,11 @@ console.log(artist);
 
 `Promise`<[`ArtistTracks`](../interfaces/types_api_ArtistTypes.ArtistTracks.md)[]\>
 
-.
+- A promise that resolves to the artist top tracks.
 
 #### Defined in
 
-[api/artists.ts:179](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L179)
+[api/artists.ts:179](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L179)
 
 ___
 
@@ -463,8 +463,8 @@ console.log(artist);
 
 `Promise`<[`Video`](../interfaces/types_api_VideoTypes.Video.md)[]\>
 
-.
+- A promise that resolves to the artist videos.
 
 #### Defined in
 
-[api/artists.ts:247](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/artists.ts#L247)
+[api/artists.ts:247](https://github.com/Mawco/node-tidal/blob/7587986/src/api/artists.ts#L247)

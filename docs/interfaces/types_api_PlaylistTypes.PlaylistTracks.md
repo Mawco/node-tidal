@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[types/api/PlaylistTypes.ts:26](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L26)
+[types/api/PlaylistTypes.ts:26](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/PlaylistTypes.ts#L26)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[types/api/PlaylistTypes.ts:24](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L24)
+[types/api/PlaylistTypes.ts:24](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/PlaylistTypes.ts#L24)
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-[types/api/PlaylistTypes.ts:25](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/PlaylistTypes.ts#L25)
+[types/api/PlaylistTypes.ts:25](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/PlaylistTypes.ts#L25)

@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[types/api/VideoTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L20)
+[types/api/VideoTypes.ts:20](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L20)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L19)
+[types/api/VideoTypes.ts:19](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L19)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:23](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L23)
+[types/api/VideoTypes.ts:23](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L23)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:15](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L15)
+[types/api/VideoTypes.ts:15](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L15)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L21)
+[types/api/VideoTypes.ts:21](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L21)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L22)
+[types/api/VideoTypes.ts:22](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L22)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:11](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L11)
+[types/api/VideoTypes.ts:11](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L11)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:16](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L16)
+[types/api/VideoTypes.ts:16](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L16)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L4)
+[types/api/VideoTypes.ts:4](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L4)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:10](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L10)
+[types/api/VideoTypes.ts:10](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L10)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:9](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L9)
+[types/api/VideoTypes.ts:9](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L9)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:17](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L17)
+[types/api/VideoTypes.ts:17](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L17)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:12](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L12)
+[types/api/VideoTypes.ts:12](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L12)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L8)
+[types/api/VideoTypes.ts:8](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L8)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:13](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L13)
+[types/api/VideoTypes.ts:13](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L13)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:14](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L14)
+[types/api/VideoTypes.ts:14](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L14)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L5)
+[types/api/VideoTypes.ts:5](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L5)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:7](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L7)
+[types/api/VideoTypes.ts:7](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L7)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:18](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L18)
+[types/api/VideoTypes.ts:18](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L18)
 
 ___
 
@@ -227,4 +227,4 @@ ___
 
 #### Defined in
 
-[types/api/VideoTypes.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/VideoTypes.ts#L6)
+[types/api/VideoTypes.ts:6](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/VideoTypes.ts#L6)

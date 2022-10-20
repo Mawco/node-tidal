@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[types/api/TrackTypes.ts:44](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L44)
+[types/api/TrackTypes.ts:44](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/TrackTypes.ts#L44)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[types/api/TrackTypes.ts:42](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L42)
+[types/api/TrackTypes.ts:42](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/TrackTypes.ts#L42)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[types/api/TrackTypes.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L43)
+[types/api/TrackTypes.ts:43](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/TrackTypes.ts#L43)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[types/api/TrackTypes.ts:45](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/types/api/TrackTypes.ts#L45)
+[types/api/TrackTypes.ts:45](https://github.com/Mawco/node-tidal/blob/7587986/src/types/api/TrackTypes.ts#L45)

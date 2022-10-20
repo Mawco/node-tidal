@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[api/albums.ts:8](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L8)
+[api/albums.ts:8](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L8)
 
 ## Properties
 
@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[api/albums.ts:6](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L6)
+[api/albums.ts:6](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L6)
 
 ## Methods
 
@@ -77,9 +77,11 @@ It gets the album information from the Tidal API.
 
 `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)\>
 
+- A promise that resolves to an album object.
+
 #### Defined in
 
-[api/albums.ts:19](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L19)
+[api/albums.ts:19](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L19)
 
 ___
 
@@ -107,9 +109,11 @@ It gets the album credits from the Tidal API.
 
 `Promise`<[`AlbumCredits`](../interfaces/types_api_AlbumTypes.AlbumCredits.md)[]\>
 
+- A promise that resolves to an array of album credits object.
+
 #### Defined in
 
-[api/albums.ts:31](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L31)
+[api/albums.ts:31](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L31)
 
 ___
 
@@ -137,9 +141,11 @@ It gets the tracks of a album from the Tidal API
 
 `Promise`<[`Track`](../interfaces/types_api_TrackTypes.Track.md)[]\>
 
+- A promise that resolves to an array of track objects.
+
 #### Defined in
 
-[api/albums.ts:43](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L43)
+[api/albums.ts:43](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L43)
 
 ___
 
@@ -167,9 +173,11 @@ It gets the tracks & the credits of a albums from the Tidal API
 
 `Promise`<[`AlbumTracksWithCredits`](../interfaces/types_api_AlbumTypes.AlbumTracksWithCredits.md)[]\>
 
+- A promise that resolves to an array of track objects.
+
 #### Defined in
 
-[api/albums.ts:55](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L55)
+[api/albums.ts:55](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L55)
 
 ___
 
@@ -191,9 +199,11 @@ It gets featured albums on Tidal from the Tidal API
 
 `Promise`<{ `newAlbums`: [`Album`](../interfaces/types_api_AlbumTypes.Album.md)[] ; `staffPicks`: [`Album`](../interfaces/types_api_AlbumTypes.Album.md)[] ; `topAlbums`: [`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]  }\>
 
+- A promise that resolves to an object with featured albums.
+
 #### Defined in
 
-[api/albums.ts:66](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L66)
+[api/albums.ts:66](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L66)
 
 ___
 
@@ -215,9 +225,11 @@ It gets new albums on Tidal from the Tidal API
 
 `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
 
+- A promise that resolves to an array of album objects.
+
 #### Defined in
 
-[api/albums.ts:96](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L96)
+[api/albums.ts:96](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L96)
 
 ___
 
@@ -239,9 +251,11 @@ It gets staff pick albums on Tidal from the Tidal API
 
 `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
 
+- A promise that resolves to an array of album objects.
+
 #### Defined in
 
-[api/albums.ts:107](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L107)
+[api/albums.ts:107](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L107)
 
 ___
 
@@ -263,6 +277,8 @@ It gets the top 20 albums on Tidal from the Tidal API
 
 `Promise`<[`Album`](../interfaces/types_api_AlbumTypes.Album.md)[]\>
 
+- A promise that resolves to an array of album objects.
+
 #### Defined in
 
-[api/albums.ts:85](https://github.com/Mawco/node-tidal/blob/7ca31f3/src/api/albums.ts#L85)
+[api/albums.ts:85](https://github.com/Mawco/node-tidal/blob/7587986/src/api/albums.ts#L85)
