@@ -2,7 +2,6 @@ import { describe } from 'mocha';
 import { expect } from 'chai';
 
 import { Tidal } from '../src';
-import axios from 'axios';
 
 describe('tracks', () => {
   let tidal: Tidal;

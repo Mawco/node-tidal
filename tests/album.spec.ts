@@ -25,8 +25,18 @@ describe('album', () => {
     it('should return an array with the correct number of track objects', async () => {
       const tracks = await tidal.albums.getAlbumTracks(240189283);
 
-      expect(tracks.items).to.be.an('array').to.have.lengthOf(16);
-      expect(tracks.items[0]).to.have.property('trackNumber');
+      expect(tracks).to.be.an('array').to.have.lengthOf(16);
+      expect(tracks[0]).to.have.property('trackNumber');
+    });
+  });
+
+  describe('getAlbumTracksWithCredits', () => {
+    it('should return an array with the correct number of track objects with credits', async () => {
+      const tracks = await tidal.albums.getAlbumTracksWithCredits(240189283);
+
+      expect(tracks).to.be.an('array').to.have.lengthOf(10);
+      expect(tracks[0].item).to.have.property('duration');
+      expect(tracks[0]).to.have.property('credits');
     });
   });
 
@@ -43,7 +53,6 @@ describe('album', () => {
       const albums = await tidal.albums.getTopAlbums();
 
       expect(albums).to.be.an('array');
-
       expect(albums[0]).to.have.property('numberOfTracks');
     });
   });
@@ -53,7 +62,6 @@ describe('album', () => {
       const albums = await tidal.albums.getNewAlbums();
 
       expect(albums).to.be.an('array');
-
       expect(albums[0]).to.have.property('numberOfTracks');
     });
   });
