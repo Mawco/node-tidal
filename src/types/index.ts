@@ -1,2 +1,2 @@
 export * from './ClientTypes';
-export * from './TidalTypes';
+export * from './api';
