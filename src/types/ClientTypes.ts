@@ -15,7 +15,8 @@ export type Country =
   | 'SL'
   | 'SR'
   | 'TR'
-  | 'US';
+  | 'US'
+  | 'AR';
 
 export type Methods = 'GET' | 'POST' | 'DELETE' | 'PUT' | 'PATCH';
 
