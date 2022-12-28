@@ -1,7 +1,7 @@
 {
   "name": "@noelportugal/node-tidal",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Unofficial TIDAL API wrapper.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
