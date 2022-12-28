@@ -53,7 +53,8 @@ const tidal = new Tidal({ token: 'token >:(', countryCode: 'EN' });
 async function playlistExample() {
   // It's getting the playlist infos of the playlist with the uuid
   // `f4cf62d9-7920-42ca-a2ac-409cf2b1df5b`.
-  const playlistInfos = await tidal.playlists.getPlaylistInfos('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
+  const getPlaylist = await tidal.playlists.getPlaylist('f4cf62d9-7920-42ca-a2ac-409cf2b1df5b');
+  console.log(getPlaylist);
 
   // OUTPUT:
   //{

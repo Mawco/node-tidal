@@ -56,6 +56,37 @@ export class Tidal {
     return items;
   }
 
+    /**
+   * It searches for top hits on Tidal.
+   * @param {string} query - The query to search for.
+   * @param {searchType} types - The type of content to search for.
+   * @param {number} [limit=50] - The amount of results to return.
+   * @param {number} [offset=0] - The offset of the results.
+   * @returns The results of the search.
+   * @example
+   * const results = await tidal.search('The Weeknd', 'tracks');
+   * console.log(results);
+   * // => { totalNumberOfItems: 100, limit: 50, offset: 0, items: [...] }
+   **/
+  public async searchTopHits(
+    query: string,
+    types: searchType,
+    limit: number = 3,
+    offset: number = 0,
+    includeContributors: boolean = true,
+  ) {
+    const items = await this._request(`search/top-hits`, {
+      params: {
+        query,
+        limit,
+        offset,
+        types,
+        includeContributors,
+      },
+    });
+    return items;
+  }
+
   /**
    * It makes a request to the Tidal API, and if it fails, it will retry the request after a certain
    * amount of time.

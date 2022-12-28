@@ -1,7 +1,7 @@
 export type OrderTypes = 'INDEX' | 'NAME' | 'ARTIST' | 'ALBUM' | 'DATE' | 'LENGTH';
 export type OrderDirections = 'ASC' | 'DESC';
 export type OnDupes = 'FAIL' | 'ADD';
-export type searchType = 'artists' | 'albums' | 'tracks' | 'videos' | 'playlists';
+export type searchType = 'artists' | 'albums' | 'tracks' | 'videos' | 'playlists' | 'artists,albums,tracks,videos,playlists';
 export type audioQuality = 'LOW' | 'HIGH' | 'LOSSLESS' | 'HI_RES';
 
 export enum AudioQualityEnum {
