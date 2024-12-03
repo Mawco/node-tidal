@@ -1,17 +1,18 @@
 # node-tidal
 
-<div align="left">
+<div align="center">
   <p>
-    <a href="https://github.com/Mawco/node-tidal"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FMawco%2Fnode-tidal%2Fbadge%3Fref%3Dmaster&style=for-the-badge" width="200" /></a>
-  </p>
-  <p>
-    <a href="https://nodei.co/npm/node-tidal"><img src="https://nodei.co/npm/node-tidal.png" /></a>
+    <a href="https://nodei.co/npm/node-tidal"><img src="https://repository-images.githubusercontent.com/513615567/761a1176-e06b-4a61-841e-1cb9c56f9f68" /></a>
   </p>
 </div>
 
+> ⚠️⚠️ THIS PROJECT IS ARCHIVED AND WILL NOT BE UPDATED ⚠️⚠️
+>
+> This project has been archives since i do not use Tidal anymore and did not feel the need to keep working on it.
+
 ## About
 
-This is a NodeJS wrapper for TIDAL's API with typings.
+This is a NodeJS wrapper for TIDAL's API with types.
 
 ## Installation
 
